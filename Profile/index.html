@@ -4,158 +4,198 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Karrthik Madhavan — Data Analytics & BI</title>
-  <meta name="description" content="Portfolio of Karrthik Madhavan, Data Analyst specialising in Power BI, Microsoft Fabric, Azure Synapse and BI governance. Irish Rail (Iarnród Éireann)."/>
-  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Portfolio of Karrthik Madhavan, Data Analyst specialising in Power BI, Microsoft Fabric, Azure Synapse and BI governance."/>
+  <meta name="color-scheme" content="light" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg: #0b0d10; --card:#111418; --muted:#6b7280; --text:#e5e7eb; --brand:#60a5fa; --accent:#a78bfa; --ring:rgba(96,165,250,.35);
-      --bg-light:#f7fafc; --text-light:#0f172a; --card-light:#ffffff; --muted-light:#4b5563;
+      --bg:#ffffff;           /* white */
+      --text:#0f172a;         /* slate-900 */
+      --muted:#64748b;        /* slate-500 */
+      --card:#ffffff;         /* white cards */
+      --border:#e5e7eb;       /* gray-200 */
+      --brand:#0BA360;        /* emerald-green */
+      --brand-2:#FF7A00;      /* vibrant orange */
+      --brand-3:#13C26B;      /* lighter green */
+      --ring: rgba(11,163,96,.25);
+      --shadow: 0 10px 30px rgba(2,6,23,0.08);
+      --radius: 18px;
     }
+    *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background:var(--bg); color:var(--text)}
-    @media (prefers-color-scheme: light){
-      body{background:var(--bg-light); color:var(--text-light)}
-      .card{background:var(--card-light);}
-      .muted{color:var(--muted-light)}
-    }
+    body{margin:0; font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; color:var(--text); background:var(--bg)}
     a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1080px; margin:auto; padding:24px}
-    header{display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-    .id{display:flex; gap:18px; align-items:center}
-    .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--brand),var(--accent)); display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-    .title h1{margin:0;font-size:28px}
-    .title p{margin:2px 0 0}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(125,125,125,.25)}
+    .container{max-width:1100px; margin:auto; padding:24px}
+
+    /* --- Top Nav --- */
+    .nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,255,255,.8); border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:40px; height:40px; border-radius:12px; color:#fff; font-weight:800; display:grid; place-items:center; background:conic-gradient(from 180deg, var(--brand), var(--brand-3), var(--brand), var(--brand-2)); box-shadow: var(--shadow)}
+    .brand h1{font-size:18px; margin:0}
+    .menu{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid var(--border); color:var(--text); background:#fff}
+    .cta{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px; border:1px solid var(--brand); background:linear-gradient(135deg, var(--brand), var(--brand-3)); color:#fff; box-shadow:var(--shadow)}
+
+    /* --- Hero --- */
+    .hero{position:relative; overflow:hidden; border-radius: calc(var(--radius) + 6px); background: linear-gradient(180deg, rgba(11,163,96,.06), rgba(255,122,0,.06)); border:1px solid var(--border); padding:36px}
+    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:28px}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+    .big{font-size:44px; line-height:1.1; margin:0 0 6px}
+    .sub{margin:0; color:var(--muted)}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
+    .chip{padding:8px 12px; border-radius:999px; border:1px solid var(--border); background:#fff; font-size:14px}
+    .hero-card{background:#fff; border:1px solid var(--border); border-radius:20px; padding:18px; box-shadow:var(--shadow)}
+    .kpis{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+    .kpi{padding:16px; border:1px solid var(--border); border-radius:16px; background:linear-gradient(180deg, rgba(11,163,96,.08), rgba(255,122,0,.04)); box-shadow:var(--shadow)}
+    .kpi strong{font-size:24px; display:block}
+    .blob{position:absolute; inset:auto -120px -160px auto; width:420px; height:420px; background: radial-gradient(closest-side, rgba(255,122,0,.18), rgba(255,122,0,0)), radial-gradient(closest-side, rgba(11,163,96,.18), rgba(11,163,96,0)); filter:blur(22px); transform:rotate(8deg)}
+
+    /* --- Sections --- */
+    section{margin:40px 0}
+    h2{font-size:22px; margin:0 0 14px}
     .grid{display:grid; gap:18px}
-    @media(min-width:900px){ .grid{grid-template-columns: 1.25fr .75fr} }
-    .card{background:var(--card); border:1px solid rgba(125,125,125,.15); border-radius:16px; padding:20px}
-    .card h2{margin:0 0 8px; font-size:20px}
+    @media(min-width:900px){.grid-2{grid-template-columns: 1.2fr .8fr}}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
     .muted{color:var(--muted)}
-    .badges{display:flex;gap:10px;flex-wrap:wrap}
-    .badge{border:1px solid rgba(125,125,125,.25); padding:6px 10px;border-radius:999px;font-size:13px}
+
+    /* --- Timeline --- */
     .timeline{display:grid; gap:12px}
-    .time-item{padding:14px;border-radius:12px;border:1px dashed rgba(125,125,125,.25)}
-    .time-item h3{margin:0 0 6px; font-size:16px}
-    .time-item .where{font-weight:500}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .kpi{padding:16px;border-radius:14px;background:linear-gradient(180deg, rgba(96,165,250,.15), rgba(167,139,250,.04)); border:1px solid rgba(96,165,250,.25)}
-    .kpi strong{display:block;font-size:22px}
-    .list{margin:0;padding-left:18px}
-    footer{margin:36px 0 12px; text-align:center; font-size:14px}
-    .cta-bar{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(125,125,125,.25); padding:10px 14px;border-radius:12px}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent)); color:#fff; border-color: transparent}
-    .split{display:grid;grid-template-columns:1fr; gap:18px}
-    @media(min-width:680px){.split{grid-template-columns:1fr 1fr}}
-    .small{font-size:14px}
-    .sr-only{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
-    .note{padding:10px;border-left:3px solid var(--brand); background:rgba(96,165,250,.08); border-radius:8px}
+    .item{padding:16px; border:1px dashed var(--border); border-radius:14px}
+    .item h3{margin:0 0 6px; font-size:18px}
+    .where{font-weight:600}
+    .list{margin:8px 0 0; padding-left:18px}
+
+    /* --- Skills --- */
+    .badges{display:flex; gap:10px; flex-wrap:wrap}
+    .badge{border:1px solid var(--border); background:#fff; padding:8px 12px; border-radius:999px; font-size:14px}
+
+    /* --- Projects --- */
+    .projects{display:grid; gap:16px}
+    @media(min-width:800px){.projects{grid-template-columns:repeat(2,1fr)}}
+    .project{position:relative; padding:18px; border-radius:16px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,122,0,.06), rgba(11,163,96,.05)); box-shadow:var(--shadow)}
+    .project h4{margin:0 0 6px}
+    .tag{display:inline-block; font-size:12px; padding:4px 8px; border-radius:999px; background:#fff; border:1px solid var(--border); margin-right:6px}
+
+    /* --- Footer --- */
+    footer{margin:40px 0 16px; text-align:center; color:var(--muted)}
+
+    /* Buttons row */
+    .btns{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:#fff}
+    .btn.primary{border-color:transparent; background:linear-gradient(135deg, var(--brand), var(--brand-3)); color:#fff}
+    .btn.ghost{background:#fff}
+
+    /* Contact card */
+    .contact-grid{display:grid; gap:16px}
+    @media(min-width:760px){.contact-grid{grid-template-columns:1.1fr .9fr}}
+    .note{padding:12px; border-left:3px solid var(--brand); background:rgba(11,163,96,.06); border-radius:12px}
   </style>
 </head>
 <body>
-  <a class="sr-only" href="#main">Skip to content</a>
+  <!-- Nav -->
+  <div class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">KM</div>
+        <h1>Karrthik Madhavan</h1>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#experience">Experience</a>
+        <a class="pill" href="#skills">Skills</a>
+        <a class="pill" href="#projects">Dashboards</a>
+        <a class="pill" href="#certs">Certs</a>
+        <a class="pill" href="#education">Education</a>
+        <a class="cta" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
   <div class="container">
-    <header>
-      <div class="id">
-        <div class="avatar" aria-hidden="true">KM</div>
-        <div class="title">
-          <h1>Karrthik Madhavan</h1>
-          <p class="muted">Data Analyst • Power BI • Microsoft Fabric • Azure Synapse</p>
-          <p class="small muted">Dublin, Ireland • <a href="mailto:Karrthik.madhavan@irishrail.ie">Karrthik.madhavan@irishrail.ie</a> • <a href="tel:+353894819401">+353 89 481 9401</a></p>
+    <section class="hero" id="about">
+      <div class="blob" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="sub">Data Analytics • Power BI • Microsoft Fabric</p>
+          <h2 class="big">I turn data into decisions with clean models, useful dashboards, and strong governance.</h2>
+          <p class="muted">8+ years across transport & e‑commerce. Currently with Iarnród Éireann (Irish Rail) delivering Fabric & Power BI solutions, frameworks, and adoption.</p>
+          <div class="chips" aria-label="Focus areas">
+            <span class="chip">Power BI (DAX/M/RLS)</span>
+            <span class="chip">Microsoft Fabric (Lakehouse/Warehouse)</span>
+            <span class="chip">Azure Synapse</span>
+            <span class="chip">SQL & Python</span>
+            <span class="chip">Governance & QA</span>
+          </div>
+          <div class="btns" style="margin-top:16px">
+            <a class="btn primary" href="mailto:Karrthik.madhavan@irishrail.ie">Email me</a>
+            <a class="btn" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">GitHub Portfolio</a>
+            <a class="btn ghost" href="tel:+353894819401">+353 89 481 9401</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="kpis" aria-label="Highlights">
+            <div class="kpi"><strong>1,300%↑</strong><span class="muted">Growth in active analytics users (2024 → P11 2025)</span></div>
+            <div class="kpi"><strong>6,052</strong><span class="muted">Total dashboard views (P11 2025)</span></div>
+            <div class="kpi"><strong>10+</strong><span class="muted">Leadership‑adopted dashboards</span></div>
+          </div>
+          <p class="muted" style="margin-top:10px">Dublin, Ireland • Karrthik.madhavan@irishrail.ie</p>
         </div>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Dashboards</a>
-        <a href="#certs">Certifications</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    </section>
 
-    <main id="main" class="grid">
-      <!-- Left column -->
-      <section class="card" id="about">
-        <h2>About</h2>
-        <p>Data Analytics professional with 8+ years delivering BI solutions and data-driven insights across transport and e‑commerce. I lead cross‑functional delivery, shape backlogs, and build robust Power BI and Fabric solutions that improve decision‑making and operational visibility. I’m passionate about good governance, clean models, and measurable adoption.</p>
-        <div class="kpis" aria-label="Highlights">
-          <div class="kpi"><strong>1,300%↑</strong><span class="muted small">Growth in active analytics users (2024 → P11 2025)</span></div>
-          <div class="kpi"><strong>6,052</strong><span class="muted small">Total dashboard views (P11 2025)</span></div>
-          <div class="kpi"><strong>10+</strong><span class="muted small">Leadership‑adopted dashboards delivered</span></div>
-        </div>
-        <div class="cta-bar" style="margin-top:14px">
-          <a class="btn primary" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">View GitHub Portfolio</a>
-          <a class="btn" href="#contact">Get in touch</a>
-        </div>
-      </section>
-
-      <!-- Right column quick facts -->
-      <aside class="card" aria-label="Quick facts">
-        <h2>Quick facts</h2>
-        <ul class="list">
-          <li><strong>Current:</strong> Data Analyst, Data Analytics & Intelligence (DAI), Iarnród Éireann (Irish Rail)</li>
-          <li><strong>Location:</strong> Dublin, Ireland</li>
-          <li><strong>Focus:</strong> Power BI, Fabric (Lakehouse/Warehouse/Dataflows Gen2, PySpark), Azure Synapse</li>
-          <li><strong>Ways of working:</strong> Agile delivery, sprint planning, governance & testing frameworks</li>
-        </ul>
-      </aside>
-
-      <!-- Experience -->
+    <!-- Main grid -->
+    <div class="grid grid-2">
       <section class="card" id="experience">
         <h2>Experience</h2>
         <div class="timeline">
-          <div class="time-item">
+          <div class="item">
             <h3>Data Analyst — Data Analytics & Intelligence</h3>
             <div class="where">Iarnród Éireann (Irish Rail) • Feb 2023 – Present • Dublin</div>
             <ul class="list">
-              <li>Lead delivery of analytics initiatives aligned to IÉ’s DAI roadmap using Power BI, Azure and Microsoft Fabric.</li>
-              <li>Built KPI dashboards for Finance, CCE & CME Engineering, and Sustainability; improved operational visibility.</li>
-              <li>Partnered with Data Engineers on data requirements, model readiness, and performance optimisation.</li>
-              <li>Defined and rolled out Power BI development, governance and testing frameworks across the organisation.</li>
-              <li>Mentored new analysts; ran best‑practice and knowledge‑sharing sessions.</li>
-              <li>Experienced with enterprise data sources: SAP, Resource Link (Zellis), AIMS, FieldReach, SharePoint, TOPS, S3, SRPSS.</li>
+              <li>Lead delivery of Power BI + Fabric initiatives; align backlogs to DAI roadmap.</li>
+              <li>Built KPI hubs for Finance, CCE/CME Engineering, Sustainability; improved decision cadence.</li>
+              <li>Co‑designed models & performance with Data Engineering; optimised refresh & visuals.</li>
+              <li>Rolled out Power BI development, governance and testing frameworks.</li>
+              <li>Mentored analysts; ran best‑practice sessions; stakeholder engagement across domains.</li>
+              <li>Enterprise data sources: SAP, Resource Link (Zellis), AIMS, FieldReach, SharePoint, TOPS, S3, SRPSS.</li>
             </ul>
           </div>
-
-          <div class="time-item">
+          <div class="item">
             <h3>Postgraduate Teaching Assistant</h3>
             <div class="where">University College Cork • Oct 2021 – Aug 2022</div>
             <ul class="list">
-              <li>Supported modules in Business Analytics and Web Application Development.</li>
-              <li>Guided students on SQL, Python and data visualisation best practices; assisted in assessments.</li>
+              <li>Supported Business Analytics & Web Development modules.</li>
+              <li>Guided SQL, Python, visualisation; assessment support.</li>
             </ul>
           </div>
-
-          <div class="time-item">
+          <div class="item">
             <h3>Senior Data Analyst – Quality Expert</h3>
             <div class="where">Amazon, Chennai • Jul 2020 – Aug 2021</div>
             <ul class="list">
-              <li>Delivered BI/forecasting tools using Python, Tableau and AWS QuickSight to monitor risk and efficiency.</li>
-              <li>Automated 200+ ETL pipelines using SQL and AWS (EC2, Redshift, S3) to improve scalability and accuracy.</li>
-              <li>Performed FMEA and process optimisation; dashboards used by senior leadership.</li>
+              <li>Delivered BI/forecasting tools in Python, Tableau, AWS QuickSight.</li>
+              <li>Automated 200+ ETL pipelines with SQL & AWS (EC2, Redshift, S3).</li>
+              <li>FMEA/process optimisation; dashboards used by leadership.</li>
             </ul>
           </div>
-
-          <div class="time-item">
+          <div class="item">
             <h3>Quality Analyst → Quality Lead</h3>
             <div class="where">Amazon, Chennai • Mar 2017 – Jul 2020</div>
             <ul class="list">
-              <li>Led a 12‑member analytics & validation team; automated manual tasks and lifted productivity by 23%.</li>
-              <li>Directed large‑scale outsourcing to vendors (e.g., Accenture), enhancing throughput and accuracy.</li>
-              <li>Collaborated with DS/SDEs to document analytics requirements and user stories.</li>
-              <li>Analysed ML outputs improving accuracy by 2.5% and coverage by 6.3% → better automation and insights.</li>
-              <li>Contributed data mining & reviews leading to catalogue growth of 25k+ SKUs.</li>
+              <li>Led a 12‑member analytics & validation team; +23% productivity.</li>
+              <li>Directed outsourcing to vendors (e.g., Accenture) to scale throughput.</li>
+              <li>Improved ML outputs (+2.5% accuracy, +6.3% coverage) through analysis.</li>
+              <li>Contributed to catalogue growth of 25k+ SKUs.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Skills & Tools -->
-      <section class="card" id="skills">
+      <aside class="card" id="skills">
         <h2>Skills & Tools</h2>
         <div class="badges">
           <span class="badge">Power BI (DAX, M, RLS)</span>
@@ -172,37 +212,46 @@
           <span class="badge">Confluence</span>
           <span class="badge">Jira / Zephyr Scale</span>
           <span class="badge">Process Optimisation</span>
-          <span class="badge">Risk Investigation (SIPOC, FMEA)</span>
+          <span class="badge">FMEA / SIPOC</span>
           <span class="badge">Stakeholder Engagement</span>
           <span class="badge">Mentoring & Leadership</span>
         </div>
-      </section>
+      </aside>
+    </div>
 
-      <!-- Projects / Dashboards -->
-      <section class="card" id="projects">
-        <h2>Selected Dashboards & Contributions</h2>
-        <p class="muted small">A sampling of impact areas. Repository links or screenshots can be added later.</p>
-        <div class="split">
-          <div class="time-item">
-            <h3>Finance KPI Hub</h3>
-            <p>Unified KPI views for finance stakeholders with governed data models and RLS. Drove adoption as part of the DAI roadmap and improved cadence of performance reviews.</p>
-          </div>
-          <div class="time-item">
-            <h3>CCE/CME Engineering Ops</h3>
-            <p>Operational dashboards tracking maintenance, asset health and field activities; optimised models for refresh performance and Power BI responsiveness.</p>
-          </div>
-          <div class="time-item">
-            <h3>Sustainability Insights</h3>
-            <p>Visibility over key sustainability metrics; collaborated on data validation frameworks to ensure accuracy and trust.</p>
-          </div>
-          <div class="time-item">
-            <h3>Governance & Testing Toolkit</h3>
-            <p>Organisation‑wide Power BI development standards, documentation templates and test practices adopted across DAI; uplifted quality and reduced rework.</p>
-          </div>
+    <!-- Projects -->
+    <section class="card" id="projects">
+      <h2>Selected Dashboards</h2>
+      <div class="projects">
+        <div class="project">
+          <h4>Finance KPI Hub</h4>
+          <p class="muted">Unified KPI views with governed models & RLS; adopted for leadership reviews.</p>
+          <span class="tag">Power BI</span> <span class="tag">RLS</span> <span class="tag">Fabric</span>
         </div>
-      </section>
+        <div class="project">
+          <h4>CCE/CME Engineering Ops</h4>
+          <p class="muted">Asset health & maintenance tracking with tuned refresh and responsive visuals.</p>
+          <span class="tag">Power BI</span> <span class="tag">Performance</span> <span class="tag">Modeling</span>
+        </div>
+        <div class="project">
+          <h4>Sustainability Insights</h4>
+          <p class="muted">Trustworthy sustainability metrics backed by validation frameworks.</p>
+          <span class="tag">Data Quality</span> <span class="tag">Governance</span>
+        </div>
+        <div class="project">
+          <h4>Governance & Testing Toolkit</h4>
+          <p class="muted">Org‑wide development standards, templates, and test practices that reduce rework.</p>
+          <span class="tag">Standards</span> <span class="tag">QA</span>
+        </div>
+      </div>
+      <div class="btns" style="margin-top:14px">
+        <a class="btn primary" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">View repository</a>
+        <a class="btn" href="#contact">Share a demo link</a>
+      </div>
+    </section>
 
-      <!-- Certifications -->
+    <!-- Certifications & Education -->
+    <div class="grid grid-2">
       <section class="card" id="certs">
         <h2>Certifications</h2>
         <ul class="list">
@@ -213,43 +262,37 @@
           <li>SAP Analytics Cloud — <em>in progress</em></li>
         </ul>
       </section>
-
-      <!-- Education & Volunteering -->
       <section class="card" id="education">
         <h2>Education & Community</h2>
-        <div class="split">
-          <div>
-            <h3>Education</h3>
-            <ul class="list">
-              <li>MSc, Business Information & Analytics Systems — University College Cork (2021–2022, 1:1)</li>
-              <li>B.E., Electronics & Communication Engineering — Anna University (2013–2017, First Class)</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Volunteering</h3>
-            <ul class="list">
-              <li>Safety Representative — Loop Line, Connolly Station, Iarnród Éireann</li>
-              <li>Tennis Council Member — Balrothery Tennis Club, Balbriggan</li>
-            </ul>
-          </div>
-        </div>
+        <ul class="list">
+          <li>MSc, Business Information & Analytics Systems — University College Cork (2021–2022, 1:1)</li>
+          <li>B.E., Electronics & Communication Engineering — Anna University (2013–2017, First Class)</li>
+          <li>Safety Representative — Loop Line, Connolly Station, Iarnród Éireann</li>
+          <li>Tennis Council Member — Balrothery Tennis Club, Balbriggan</li>
+        </ul>
       </section>
+    </div>
 
-      <!-- Contact -->
-      <section class="card" id="contact">
-        <h2>Contact</h2>
-        <p>Open to collaborating on BI strategy, Power BI enablement, Fabric implementations, and analytics governance.</p>
-        <div class="cta-bar">
-          <a class="btn primary" href="mailto:Karrthik.madhavan@irishrail.ie">Email Karrthik</a>
-          <a class="btn" href="tel:+353894819401">Call</a>
-          <a class="btn" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">GitHub</a>
+    <!-- Contact -->
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>
+          <p>Open to BI strategy, enablement, and Fabric implementations. Let’s connect.</p>
+          <div class="btns">
+            <a class="btn primary" href="mailto:Karrthik.madhavan@irishrail.ie">Email Karrthik</a>
+            <a class="btn" href="tel:+353894819401">Call</a>
+            <a class="btn" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
-        <p class="note small" style="margin-top:14px">Tip: add LinkedIn and specific Power BI report links here when public links are available.</p>
-      </section>
-    </main>
+        <div class="note">
+          <strong>Tip:</strong> add LinkedIn and public Power BI report links here for quick access once available.
+        </div>
+      </div>
+    </section>
 
     <footer>
-      <small class="muted">© <span id="y"></span> Karrthik Madhavan • Built with semantic, accessible HTML • Dark‑mode ready</small>
+      <small>© <span id="y"></span> Karrthik Madhavan • Dublin, Ireland</small>
     </footer>
   </div>
 
@@ -257,7 +300,7 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 
-  <!-- Structured data for richer previews -->
+  <!-- Schema.org for richer previews -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -267,7 +310,7 @@
     "email": "mailto:Karrthik.madhavan@irishrail.ie",
     "telephone": "+353894819401",
     "address": {"@type":"PostalAddress","addressLocality":"Dublin","addressCountry":"IE"},
-    "url": "https://github.com/karrthikmadhavan/Portfollio",
+    "url": "https://karrthikmadhavan.github.io/Portfollio/Profile/",
     "knowsAbout": ["Power BI","Microsoft Fabric","Azure Synapse","SQL","Python","Data Governance"],
     "alumniOf": ["University College Cork","Anna University"]
   }
