@@ -190,20 +190,28 @@
           ].join('');
         },
         certifications(){
-          document.title = 'Certifications — Karrthik Madhavan';
-          return [
-            '<section class="card">',
-              '<h2>Certifications</h2>',
-              '<ul class="list">',
-                '<li>Microsoft Certified: <strong>Power BI Data Analyst Associate (PL‑300)</strong></li>',
-                '<li>Lean and Six Sigma Principles — University of Limerick</li>',
-                '<li>Certified Scrum Master (CSM)</li>',
-                '<li>Fabric Analytics Engineer Associate (DP‑600) — <em>in progress</em></li>',
-                '<li>SAP Analytics Cloud — <em>in progress</em></li>',
-              '</ul>',
-            '</section>'
-          ].join('');
-        },
+  document.title = 'Certifications & Education — Karrthik Madhavan';
+  return [
+    '<section class="card">',
+      '<h2>Certifications</h2>',
+      '<ul class="list">',
+        '<li>Microsoft Certified: <strong>Power BI Data Analyst Associate (PL-300)</strong></li>',
+        '<li>Lean and Six Sigma Principles — University of Limerick</li>',
+        '<li>Certified Scrum Master (CSM)</li>',
+        '<li>Fabric Analytics Engineer Associate (DP-600) — <em>in progress</em></li>',
+        '<li>SAP Analytics Cloud — <em>in progress</em></li>',
+      '</ul>',
+    '</section>',
+    '<section class="card">',
+      '<h2>Education</h2>',
+      '<ul class="list">',
+        '<li><strong>MSc, Business Information & Analytics Systems</strong> — University College Cork (2021–2022, 1:1)</li>',
+        '<li><strong>B.E., Electronics & Communication Engineering</strong> — Anna University (2013–2017, First Class)</li>',
+      '</ul>',
+    '</section>'
+  ].join('');
+}
+,
         hobbies(sub){
           const tabs = ['tennis','badminton','boxing','photography','dinghy-sailing'];
           const names = {tennis:'Tennis',badminton:'Badminton',boxing:'Boxing',photography:'Photography','dinghy-sailing':'Dinghy Sailing'};
