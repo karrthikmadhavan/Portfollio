@@ -61,9 +61,40 @@
     @media(max-width:960px){.exp-wrap{grid-template-columns:1fr}}
     .years{position:relative; background:#fff; border:1px solid var(--border); padding:16px; box-shadow:var(--shadow)}
     .years .rail{position:absolute; left:28px; top:16px; bottom:16px; width:4px; background:linear-gradient(180deg, var(--brand), var(--brand-2));}
-    .year-list{margin:0; padding:0 0 0 84px; list-style:none; max-height:560px; overflow:auto}
-    .year-btn{display:flex; align-items:center; gap:12px; width:100%; text-align:left; padding:16px 18px; border:2px solid var(--border); background:#fff; cursor:pointer; min-height:var(--touch); font-size: var(--step-2); font-weight:700}
-    .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+    /* Compact year list — all visible, no scroll */
+.year-list{
+  margin:0;
+  padding:0 0 0 68px;
+  list-style:none;
+  max-height:none;
+  overflow:visible; /* removes scroll */
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+/* Year buttons smaller and neater */
+.year-btn{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  width:100%;
+  text-align:left;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  background:#fff;
+  cursor:pointer;
+  min-height:40px;
+  font-size:clamp(1rem, 0.9vw + 0.6rem, 1.1rem);
+  font-weight:600;
+  transition:all .2s ease;
+}
+.year-btn[aria-pressed="true"]{
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px var(--ring);
+}
+
 
     /* BIG, UNCROPPED INDICATOR */
     .indicator{
