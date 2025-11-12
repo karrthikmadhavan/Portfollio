@@ -317,10 +317,25 @@
           return 'amazon';
         }
         const svgs = {
-          amazon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3c3.3 0 6 2.7 6 6 0 2.5-1.5 4.6-3.7 5.5-.3.1-.4.3-.3.6l.6 2.2c.1.4-.3.7-.6.5l-2.1-1.3c-.2-.1-.4-.1-.6 0l-2.1 1.3c-.3.2-.7-.1-.6-.5l.6-2.2c.1-.3 0-.5-.3-.6C7.5 13.6 6 11.5 6 9c0-3.3 2.7-6 6-6z"/></svg>',
-          ucc: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" fill="currentColor"/></svg>',
-          irishrail: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 12h18M6 7l6 5-6 5"/></svg>'
-        };
+  amazon: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF9900" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
+      256-114.6 256-256S397.4 0 256 0zm74.5 367.3c-32.4 13.3-67.4 20.4-104.5 20.4
+      -60.5 0-114.9-22.4-156.2-59.7-4.4-4-1.2-9.4 4.8-6.3
+      44.4 25.9 99.3 41.5 156.3 41.5 38.4 0 79.8-7.8 118.1-23.8
+      5.8-2.4 10.7 3.7 4.5 8zM383.7 344c-5.7-7.5-37.4-3.6-51.6-1.8
+      -4.3.5-5-3.2-1.1-6 25.3-17.8 66.8-12.6 71.6-6.7 4.8 5.9-1.3 39.3-23.8 55.7
+      -3.6 2.6-7.2 1.2-5.5-2.6 6.6-15.2 14.4-31.1 15.8-38.6z"/>
+  </svg>`,
+  
+  ucc: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF7A00" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
+      256-114.6 256-256S397.4 0 256 0zm-47 360h94v-32h-30V192h30v-32h-94v32h30v136h-30v32z"/>
+  </svg>`,
+
+  irishrail: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF7A00" d="M480 352H32L64 288h384l32 64zM416 288l-64-128H160l-64 128h320zM192 384a32 32 0 1 0 0-64 32 32 0 0 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 0 0 0 64z"/>
+  </svg>`
+};
 
         function setIndicator(year){
           const btn = yearsEl.querySelector('button[data-year="'+year+'"]');
@@ -408,10 +423,25 @@
         }
 
         const svgs = {
-          amazon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3c3.3 0 6 2.7 6 6 0 2.5-1.5 4.6-3.7 5.5-.3.1-.4.3-.3.6l.6 2.2c.1.4-.3.7-.6.5l-2.1-1.3c-.2-.1-.4-.1-.6 0l-2.1 1.3c-.3.2-.7-.1-.6-.5l.6-2.2c.1-.3 0-.5-.3-.6C7.5 13.6 6 11.5 6 9c0-3.3 2.7-6 6-6z"/></svg>',
-          ucc: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" fill="currentColor"/></svg>',
-          irishrail: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 12h18M6 7l6 5-6 5"/></svg>'
-        };
+  amazon: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF9900" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
+      256-114.6 256-256S397.4 0 256 0zm74.5 367.3c-32.4 13.3-67.4 20.4-104.5 20.4
+      -60.5 0-114.9-22.4-156.2-59.7-4.4-4-1.2-9.4 4.8-6.3
+      44.4 25.9 99.3 41.5 156.3 41.5 38.4 0 79.8-7.8 118.1-23.8
+      5.8-2.4 10.7 3.7 4.5 8zM383.7 344c-5.7-7.5-37.4-3.6-51.6-1.8
+      -4.3.5-5-3.2-1.1-6 25.3-17.8 66.8-12.6 71.6-6.7 4.8 5.9-1.3 39.3-23.8 55.7
+      -3.6 2.6-7.2 1.2-5.5-2.6 6.6-15.2 14.4-31.1 15.8-38.6z"/>
+  </svg>`,
+  
+  ucc: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF7A00" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
+      256-114.6 256-256S397.4 0 256 0zm-47 360h94v-32h-30V192h30v-32h-94v32h30v136h-30v32z"/>
+  </svg>`,
+
+  irishrail: `<svg viewBox="0 0 512 512" aria-hidden="true">
+    <path fill="#FF7A00" d="M480 352H32L64 288h384l32 64zM416 288l-64-128H160l-64 128h320zM192 384a32 32 0 1 0 0-64 32 32 0 0 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 0 0 0 64z"/>
+  </svg>`
+};
 
         function setIndicator(year){
           const btn = yearsEl.querySelector('button[data-year="'+year+'"]');
