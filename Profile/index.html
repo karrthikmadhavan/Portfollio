@@ -91,6 +91,22 @@
       .roadmap{gap:14px}
       .step{min-width:240px}
     }
+  
+    /* --- Roadmap: Vertical Years --- */
+    .exp-wrap{display:grid; gap:18px; grid-template-columns: 220px 1fr}
+    @media(max-width:900px){.exp-wrap{grid-template-columns:1fr}}
+    .years{position:relative; background:#fff; border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .years .rail{position:absolute; left:28px; top:16px; bottom:16px; width:4px; background:linear-gradient(180deg, var(--brand), var(--brand-2)); border-radius:4px}
+    .year-list{margin:0; padding:0 0 0 48px; list-style:none; max-height:520px; overflow:auto}
+    .year-btn{display:flex; align-items:center; gap:10px; width:100%; text-align:left; padding:10px 12px; border-radius:12px; border:1px solid var(--border); background:#fff; cursor:pointer}
+    .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+    .dot{flex:0 0 14px; height:14px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 3px #fff, 0 0 0 5px rgba(11,163,96,.18)}
+
+    .details{background:#fff; border:1px solid var(--border); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .detail-year{display:inline-block; margin-bottom:8px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:#fff; font-weight:600}
+    .entry{padding:14px; border:1px dashed var(--border); border-radius:14px; margin-bottom:12px}
+    .entry h4{margin:0 0 6px}
+    .meta{color:var(--muted); font-size:14px}
   </style>
 </head>
 <body>
@@ -170,47 +186,13 @@
         document.title = 'Experience — Karrthik Madhavan';
         return `
           <section class="card">
-            <h2>Experience — Roadmap</h2>
-            <div class="roadmap" aria-label="Career timeline">
-              <div class="step">
-                <h3>Quality Analyst → Quality Lead</h3>
-                <div class="meta"><span class="tag">Amazon</span> · Mar 2017 – Jul 2020 · Chennai</div>
-                <ul class="list">
-                  <li>Led a 12‑member analytics/validation team; <strong>+23% productivity</strong>.</li>
-                  <li>Scaled operations via vendor partnerships (e.g., Accenture).</li>
-                  <li>Improved ML accuracy <strong>+2.5%</strong> and coverage <strong>+6.3%</strong>; +25k SKUs.</li>
-                </ul>
-              </div>
-
-              <div class="step">
-                <h3>Senior Data Analyst – Quality Expert</h3>
-                <div class="meta"><span class="tag">Amazon</span> · Jul 2020 – Aug 2021 · Chennai</div>
-                <ul class="list">
-                  <li>Delivered BI/forecasting with Python, Tableau, QuickSight.</li>
-                  <li>Automated <strong>200+ ETL</strong> pipelines (SQL, AWS EC2/Redshift/S3).</li>
-                  <li>FMEA and process optimisation; dashboards used by leadership.</li>
-                </ul>
-              </div>
-
-              <div class="step">
-                <h3>Postgraduate Teaching Assistant</h3>
-                <div class="meta"><span class="tag">University College Cork</span> · Oct 2021 – Aug 2022 · Cork</div>
-                <ul class="list">
-                  <li>Supported Business Analytics & Web App Development modules.</li>
-                  <li>Guided SQL, Python and visualisation; assessment support.</li>
-                </ul>
-              </div>
-
-              <div class="step">
-                <h3>Data Analyst — Data Analytics & Intelligence</h3>
-                <div class="meta"><span class="tag">Iarnród Éireann (Irish Rail)</span> · Feb 2023 – Present · Dublin</div>
-                <ul class="list">
-                  <li>Lead Power BI + Fabric delivery aligned to the DAI roadmap.</li>
-                  <li>Finance, CCE/CME Engineering & Sustainability KPI hubs.</li>
-                  <li>Org‑wide Power BI <strong>governance & testing frameworks</strong>.</li>
-                  <li>Highlights: <strong>1,300% user growth</strong>, <strong>6,052 views</strong> (P11 2025), <strong>10+ dashboards</strong> in leadership use.</li>
-                </ul>
-              </div>
+            <h2>Experience — Yearly Roadmap</h2>
+            <div class="exp-wrap">
+              <aside class="years">
+                <div class="rail" aria-hidden="true"></div>
+                <ul id="expYears" class="year-list" aria-label="Years"></ul>
+              </aside>
+              <div id="expDetails" class="details" aria-live="polite"></div>
             </div>
           </section>
         `;
@@ -331,10 +313,96 @@
       }
       app.innerHTML = html;
       setActive(active);
+      // After render: init page-specific logic
+      if(parts[0]==='experience') initExperience();
+      window.scrollTo({top:0, behavior:'smooth'});
+    } else if(parts[0]==='experience'){
+        html = pages.experience();
+        active = document.querySelector('a[href="#/experience"]');
+      } else if(parts[0]==='skills'){
+        html = pages.skills();
+        active = document.querySelector('a[href="#/skills"]');
+      } else if(parts[0]==='certifications'){
+        html = pages.certifications();
+        active = document.querySelector('a[href="#/certifications"]');
+      } else if(parts[0]==='hobbies'){
+        html = pages.hobbies(parts[1]);
+        active = document.querySelector('a[href="#/hobbies"]');
+      } else {
+        html = pages.notFound();
+      }
+      app.innerHTML = html;
+      setActive(active);
       window.scrollTo({top:0, behavior:'smooth'});
     }
     window.addEventListener('hashchange', render);
     if(!location.hash) location.hash = '#/';
+    
+    // --- Experience data + init ---
+    const experienceData = {
+      2017: [{title:'Quality Analyst', company:'Amazon', location:'Chennai', period:'Mar 2017 – Dec 2018', points:[
+        'Analytics & validation across retail catalogues',
+        'Built early automations to remove manual checks'
+      ]}],
+      2018: [{title:'Quality Analyst', company:'Amazon', location:'Chennai', period:'All year', points:[
+        'Scaled QA playbooks and SOPs', 'Partnered with SDE/DS for data capture'] }],
+      2019: [{title:'Quality Lead (acting)', company:'Amazon', location:'Chennai', period:'Jan 2019 – Dec 2019', points:[
+        'Led 12‑member team; productivity +23%', 'Vendor ramp (Accenture) to increase throughput'] }],
+      2020: [{title:'Senior Data Analyst – Quality Expert', company:'Amazon', location:'Chennai', period:'Jul 2020 – Dec 2020', points:[
+        'BI/forecasting in Python, Tableau, QuickSight', 'Automated 200+ ETL with SQL & AWS' ]}],
+      2021: [{title:'Senior Data Analyst – Quality Expert', company:'Amazon', location:'Chennai', period:'Jan 2021 – Aug 2021', points:[
+        'FMEA & process optimisation; leadership dashboards' ]}],
+      2022: [{title:'Postgraduate Teaching Assistant', company:'University College Cork', location:'Cork', period:'Oct 2021 – Aug 2022', points:[
+        'Supported Business Analytics & Web App Dev', 'Guided SQL, Python & viz; assessment support' ]}],
+      2023: [{title:'Data Analyst — Data Analytics & Intelligence', company:'Iarnród Éireann (Irish Rail)', location:'Dublin', period:'Feb 2023 – Dec 2023', points:[
+        'KPI hubs for Finance & Engineering (CCE/CME)', 'Power BI governance & testing frameworks' ]}],
+      2024: [{title:'Data Analyst — DAI', company:'Iarnród Éireann (Irish Rail)', location:'Dublin', period:'All year', points:[
+        'Active analytics users up 1,300% (2024→P11 2025)', 'Fabric adoption; model/perf optimisation' ]}],
+      2025: [{title:'Data Analyst — DAI', company:'Iarnród Éireann (Irish Rail)', location:'Dublin', period:'To date', points:[
+        '6,052 total dashboard views by P11 2025', '10+ leadership‑adopted dashboards' ]}]
+    };
+
+    function initExperience(){
+      const yearsEl = document.getElementById('expYears');
+      const detailsEl = document.getElementById('expDetails');
+      if(!yearsEl || !detailsEl) return;
+      const years = Object.keys(experienceData).map(n=>+n).sort((a,b)=>b-a); // latest first
+      yearsEl.innerHTML = years.map((y,i)=>`<li style="margin-bottom:8px"><button class="year-btn" data-year="${y}" aria-pressed="${i===0}"><span class="dot" aria-hidden="true"></span><strong>${y}</strong></button></li>`).join('');
+      function renderYear(y){
+        const entries = experienceData[y]||[];
+        detailsEl.innerHTML = `<span class='detail-year'>${y}</span>` + entries.map(e=>`
+          <div class='entry'>
+            <h4>${e.title}</h4>
+            <div class='meta'>${e.company} • ${e.location} • ${e.period}</div>
+            <ul class='list'>${e.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+          </div>`).join('');
+      }
+      // initial render
+      renderYear(years[0]);
+      // interactions
+      yearsEl.addEventListener('click', (e)=>{
+        const btn = e.target.closest('.year-btn');
+        if(!btn) return;
+        yearsEl.querySelectorAll('.year-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+        renderYear(+btn.dataset.year);
+      });
+      // keyboard support
+      yearsEl.addEventListener('keydown', (e)=>{
+        const keys = ['ArrowUp','ArrowDown','Home','End'];
+        if(!keys.includes(e.key)) return;
+        const items = [...yearsEl.querySelectorAll('.year-btn')];
+        const i = items.indexOf(document.activeElement);
+        let j = i;
+        if(e.key==='ArrowUp') j = Math.max(0, i-1);
+        if(e.key==='ArrowDown') j = Math.min(items.length-1, i+1);
+        if(e.key==='Home') j = 0;
+        if(e.key==='End') j = items.length-1;
+        items[j].focus();
+        e.preventDefault();
+      });
+    }
+
     render();
   </script>
 
