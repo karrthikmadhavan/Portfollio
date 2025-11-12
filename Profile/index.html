@@ -64,8 +64,31 @@
     .year-list{margin:0; padding:0 0 0 48px; list-style:none; max-height:520px; overflow:auto}
     .year-btn{display:flex; align-items:center; gap:10px; width:100%; text-align:left; padding:12px 14px; border:1px solid var(--border); background:#fff; cursor:pointer; min-height:var(--touch)}
     .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
-    .indicator{position:absolute; left:20px; width:24px; height:24px; display:grid; place-items:center; background:#fff; border:1px solid var(--border); box-shadow:0 4px 12px rgba(0,0,0,.08); transition:top .24s ease, left .24s ease}
-    .indicator svg{width:16px; height:16px; display:block}
+    .indicator {
+  position:absolute;
+  left:12px;
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border:2px solid var(--border);
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+  transition:top .3s ease, left .3s ease;
+  border-radius:8px;
+  overflow:visible;
+  z-index:5;
+}
+
+.indicator svg,
+.indicator img {
+  width:32px;
+  height:32px;
+  display:block;
+  object-fit:contain;
+}
+
 
     .details{background:#fff; border:1px solid var(--border); padding: clamp(14px, 2.5vw, 20px); box-shadow:var(--shadow)}
     .detail-year{display:inline-block; margin-bottom:8px; padding:8px 12px; border:1px solid var(--border); background:#fff; font-weight:600}
