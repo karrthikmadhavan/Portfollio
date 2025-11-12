@@ -1,317 +1,276 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Karrthik Madhavan - Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
-	<meta name="description" content="Portfolio website of Karrthik Madhavan" />
-	<meta name="keywords" content="Karrthik, Madhavan, Sid, Karrthik portfolio, Karrthik Madhavan, Sid Portfolio" />
-	<meta name="author" content="Karrthik Madhavan" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karrthik Madhavan — Data Analytics & BI</title>
+  <meta name="description" content="Portfolio of Karrthik Madhavan, Data Analyst specialising in Power BI, Microsoft Fabric, Azure Synapse and BI governance. Irish Rail (Iarnród Éireann)."/>
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{
+      --bg: #0b0d10; --card:#111418; --muted:#6b7280; --text:#e5e7eb; --brand:#60a5fa; --accent:#a78bfa; --ring:rgba(96,165,250,.35);
+      --bg-light:#f7fafc; --text-light:#0f172a; --card-light:#ffffff; --muted-light:#4b5563;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background:var(--bg); color:var(--text)}
+    @media (prefers-color-scheme: light){
+      body{background:var(--bg-light); color:var(--text-light)}
+      .card{background:var(--card-light);}
+      .muted{color:var(--muted-light)}
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px; margin:auto; padding:24px}
+    header{display:flex; gap:18px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .id{display:flex; gap:18px; align-items:center}
+    .avatar{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--brand),var(--accent)); display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .title h1{margin:0;font-size:28px}
+    .title p{margin:2px 0 0}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(125,125,125,.25)}
+    .grid{display:grid; gap:18px}
+    @media(min-width:900px){ .grid{grid-template-columns: 1.25fr .75fr} }
+    .card{background:var(--card); border:1px solid rgba(125,125,125,.15); border-radius:16px; padding:20px}
+    .card h2{margin:0 0 8px; font-size:20px}
+    .muted{color:var(--muted)}
+    .badges{display:flex;gap:10px;flex-wrap:wrap}
+    .badge{border:1px solid rgba(125,125,125,.25); padding:6px 10px;border-radius:999px;font-size:13px}
+    .timeline{display:grid; gap:12px}
+    .time-item{padding:14px;border-radius:12px;border:1px dashed rgba(125,125,125,.25)}
+    .time-item h3{margin:0 0 6px; font-size:16px}
+    .time-item .where{font-weight:500}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .kpi{padding:16px;border-radius:14px;background:linear-gradient(180deg, rgba(96,165,250,.15), rgba(167,139,250,.04)); border:1px solid rgba(96,165,250,.25)}
+    .kpi strong{display:block;font-size:22px}
+    .list{margin:0;padding-left:18px}
+    footer{margin:36px 0 12px; text-align:center; font-size:14px}
+    .cta-bar{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(125,125,125,.25); padding:10px 14px;border-radius:12px}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent)); color:#fff; border-color: transparent}
+    .split{display:grid;grid-template-columns:1fr; gap:18px}
+    @media(min-width:680px){.split{grid-template-columns:1fr 1fr}}
+    .small{font-size:14px}
+    .sr-only{position:absolute;clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+    .note{padding:10px;border-left:3px solid var(--brand); background:rgba(96,165,250,.08); border-radius:8px}
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <div class="container">
+    <header>
+      <div class="id">
+        <div class="avatar" aria-hidden="true">KM</div>
+        <div class="title">
+          <h1>Karrthik Madhavan</h1>
+          <p class="muted">Data Analyst • Power BI • Microsoft Fabric • Azure Synapse</p>
+          <p class="small muted">Dublin, Ireland • <a href="mailto:Karrthik.madhavan@irishrail.ie">Karrthik.madhavan@irishrail.ie</a> • <a href="tel:+353894819401">+353 89 481 9401</a></p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Dashboards</a>
+        <a href="#certs">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <main id="main" class="grid">
+      <!-- Left column -->
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>Data Analytics professional with 8+ years delivering BI solutions and data-driven insights across transport and e‑commerce. I lead cross‑functional delivery, shape backlogs, and build robust Power BI and Fabric solutions that improve decision‑making and operational visibility. I’m passionate about good governance, clean models, and measurable adoption.</p>
+        <div class="kpis" aria-label="Highlights">
+          <div class="kpi"><strong>1,300%↑</strong><span class="muted small">Growth in active analytics users (2024 → P11 2025)</span></div>
+          <div class="kpi"><strong>6,052</strong><span class="muted small">Total dashboard views (P11 2025)</span></div>
+          <div class="kpi"><strong>10+</strong><span class="muted small">Leadership‑adopted dashboards delivered</span></div>
+        </div>
+        <div class="cta-bar" style="margin-top:14px">
+          <a class="btn primary" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">View GitHub Portfolio</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </section>
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+      <!-- Right column quick facts -->
+      <aside class="card" aria-label="Quick facts">
+        <h2>Quick facts</h2>
+        <ul class="list">
+          <li><strong>Current:</strong> Data Analyst, Data Analytics & Intelligence (DAI), Iarnród Éireann (Irish Rail)</li>
+          <li><strong>Location:</strong> Dublin, Ireland</li>
+          <li><strong>Focus:</strong> Power BI, Fabric (Lakehouse/Warehouse/Dataflows Gen2, PySpark), Azure Synapse</li>
+          <li><strong>Ways of working:</strong> Agile delivery, sprint planning, governance & testing frameworks</li>
+        </ul>
+      </aside>
 
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+      <!-- Experience -->
+      <section class="card" id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="time-item">
+            <h3>Data Analyst — Data Analytics & Intelligence</h3>
+            <div class="where">Iarnród Éireann (Irish Rail) • Feb 2023 – Present • Dublin</div>
+            <ul class="list">
+              <li>Lead delivery of analytics initiatives aligned to IÉ’s DAI roadmap using Power BI, Azure and Microsoft Fabric.</li>
+              <li>Built KPI dashboards for Finance, CCE & CME Engineering, and Sustainability; improved operational visibility.</li>
+              <li>Partnered with Data Engineers on data requirements, model readiness, and performance optimisation.</li>
+              <li>Defined and rolled out Power BI development, governance and testing frameworks across the organisation.</li>
+              <li>Mentored new analysts; ran best‑practice and knowledge‑sharing sessions.</li>
+              <li>Experienced with enterprise data sources: SAP, Resource Link (Zellis), AIMS, FieldReach, SharePoint, TOPS, S3, SRPSS.</li>
+            </ul>
+          </div>
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+          <div class="time-item">
+            <h3>Postgraduate Teaching Assistant</h3>
+            <div class="where">University College Cork • Oct 2021 – Aug 2022</div>
+            <ul class="list">
+              <li>Supported modules in Business Analytics and Web Application Development.</li>
+              <li>Guided students on SQL, Python and data visualisation best practices; assisted in assessments.</li>
+            </ul>
+          </div>
 
-	<script src="js/particle.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+          <div class="time-item">
+            <h3>Senior Data Analyst – Quality Expert</h3>
+            <div class="where">Amazon, Chennai • Jul 2020 – Aug 2021</div>
+            <ul class="list">
+              <li>Delivered BI/forecasting tools using Python, Tableau and AWS QuickSight to monitor risk and efficiency.</li>
+              <li>Automated 200+ ETL pipelines using SQL and AWS (EC2, Redshift, S3) to improve scalability and accuracy.</li>
+              <li>Performed FMEA and process optimisation; dashboards used by senior leadership.</li>
+            </ul>
+          </div>
 
-	</head>
-	<body>
+          <div class="time-item">
+            <h3>Quality Analyst → Quality Lead</h3>
+            <div class="where">Amazon, Chennai • Mar 2017 – Jul 2020</div>
+            <ul class="list">
+              <li>Led a 12‑member analytics & validation team; automated manual tasks and lifted productivity by 23%.</li>
+              <li>Directed large‑scale outsourcing to vendors (e.g., Accenture), enhancing throughput and accuracy.</li>
+              <li>Collaborated with DS/SDEs to document analytics requirements and user stories.</li>
+              <li>Analysed ML outputs improving accuracy by 2.5% and coverage by 6.3% → better automation and insights.</li>
+              <li>Contributed data mining & reviews leading to catalogue growth of 25k+ SKUs.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-	<div class="fh5co-loader"></div>
+      <!-- Skills & Tools -->
+      <section class="card" id="skills">
+        <h2>Skills & Tools</h2>
+        <div class="badges">
+          <span class="badge">Power BI (DAX, M, RLS)</span>
+          <span class="badge">Microsoft Fabric</span>
+          <span class="badge">Azure Synapse</span>
+          <span class="badge">SQL</span>
+          <span class="badge">Python</span>
+          <span class="badge">Enterprise Data Modelling</span>
+          <span class="badge">Dataflows Gen2</span>
+          <span class="badge">PySpark</span>
+          <span class="badge">Agile Delivery & Sprints</span>
+          <span class="badge">Backlog Management</span>
+          <span class="badge">Governance & QA</span>
+          <span class="badge">Confluence</span>
+          <span class="badge">Jira / Zephyr Scale</span>
+          <span class="badge">Process Optimisation</span>
+          <span class="badge">Risk Investigation (SIPOC, FMEA)</span>
+          <span class="badge">Stakeholder Engagement</span>
+          <span class="badge">Mentoring & Leadership</span>
+        </div>
+      </section>
 
-	<div id="page">
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" style="height: 100vh;" role="banner" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box mobile-padding" data-animate-effect="fadeIn">
-							<div class="profile-thumb" style="background: url(images/Karrthik_profile_pic.jpg);"></div>
-							<h1>Karrthik Madhavan</h1>
-							<h2 style="font-size: x-large;"><span></span></h2>
-							<p>
-								<ul class="fh5co-social-icons">
-									<li><a href="https://www.linkedin.com/in/Karrthik-madhavan/" target="_blank"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="https://github.com/karrthikmadhavan" target="_blank"><i class="icon-github2"></i></a></li>
-									
-									
-								</ul>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	</div>
+      <!-- Projects / Dashboards -->
+      <section class="card" id="projects">
+        <h2>Selected Dashboards & Contributions</h2>
+        <p class="muted small">A sampling of impact areas. Repository links or screenshots can be added later.</p>
+        <div class="split">
+          <div class="time-item">
+            <h3>Finance KPI Hub</h3>
+            <p>Unified KPI views for finance stakeholders with governed data models and RLS. Drove adoption as part of the DAI roadmap and improved cadence of performance reviews.</p>
+          </div>
+          <div class="time-item">
+            <h3>CCE/CME Engineering Ops</h3>
+            <p>Operational dashboards tracking maintenance, asset health and field activities; optimised models for refresh performance and Power BI responsiveness.</p>
+          </div>
+          <div class="time-item">
+            <h3>Sustainability Insights</h3>
+            <p>Visibility over key sustainability metrics; collaborated on data validation frameworks to ensure accuracy and trust.</p>
+          </div>
+          <div class="time-item">
+            <h3>Governance & Testing Toolkit</h3>
+            <p>Organisation‑wide Power BI development standards, documentation templates and test practices adopted across DAI; uplifted quality and reduced rework.</p>
+          </div>
+        </div>
+      </section>
 
-	<div id="fh5co-about">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>About Me</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-5" style="padding: 3%">
-                    <img class="about-me-image" src="images/Karrthik.jpg"></img>
-				</div>
-				<div class="col-md-7" style="padding: 2% 5%; text-align: justify;">
-					<h2>Hello There!</h2>
-					<p>I’m Karrthik, trying to be better and learn new things everyday :)</p>
-					<p>I've always had a passion with computers and programming, and I began my career as a data analyst 
-						at Amazon. With a variety of projects to work on, I was able to hone my abilities and advance my
-						career to catalogue lead and, subsequently, Quality Expert. Throughout my 
-						professional career, I've worked on process development and numerous analytics methodologies, 
-						which has strengthened my programming and analytics abilities. I was lucky to have senior engineers
-						 act as mentors and help me build my programming abilities. I pursued a Masters in Business 
-						Analytics to broaden my knowledge in the business and data analytics fields. To elevate my analytics 
-						and programming abilities for my career.
-						</p>
-						
-					<p>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+      <!-- Certifications -->
+      <section class="card" id="certs">
+        <h2>Certifications</h2>
+        <ul class="list">
+          <li>Microsoft Certified: <strong>Power BI Data Analyst Associate (PL‑300)</strong></li>
+          <li>Lean and Six Sigma Principles — University of Limerick</li>
+          <li>Certified Scrum Master (CSM)</li>
+          <li>Fabric Analytics Engineer Associate (DP‑600) — <em>in progress</em></li>
+          <li>SAP Analytics Cloud — <em>in progress</em></li>
+        </ul>
+      </section>
 
-	<div id="fh5co-resume" class="fh5co-bg-color">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Tutor/Teaching Assistant ( Part-time )</h3>
-									<span class="company">University College Cork - October 2021 - August 2022 </span>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-inverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Quality Expert (Senior Data Analyst)</h3>
-									<span class="company">Amazon - July 2020 - August 2021</span>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Catalogue Lead</h3>
-									<span class="company">Amazon - February 2019 - July 2020</span>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Quality Analyst</h3>
-									<span class="company">Amazon - March 2017 - February 2019</span>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">System Engineer trainee - Intern</h3>
-									<span class="company">Infosys - June 2016 – October 2016</span>
-								</div>
-								<div class="timeline-body">
-								</div>
-							</div>
-						</li>
+      <!-- Education & Volunteering -->
+      <section class="card" id="education">
+        <h2>Education & Community</h2>
+        <div class="split">
+          <div>
+            <h3>Education</h3>
+            <ul class="list">
+              <li>MSc, Business Information & Analytics Systems — University College Cork (2021–2022, 1:1)</li>
+              <li>B.E., Electronics & Communication Engineering — Anna University (2013–2017, First Class)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Volunteering</h3>
+            <ul class="list">
+              <li>Safety Representative — Loop Line, Connolly Station, Iarnród Éireann</li>
+              <li>Tennis Council Member — Balrothery Tennis Club, Balbriggan</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Masters Degree</h3>
-									<span class="company">University College Cork - 2021 - 2022</span>
-								</div>
-								<div class="timeline-body">
-									<p>MSc. Business Information and Analytical Systems</p>
-									<p>First Class Honours</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelors Degree</h3>
-									<span class="company">Anna University - 2012 - 2016</span>
-								</div>
-								<div class="timeline-body">
-									<p>B.E. Electrical and Communication engineering </p>
-									<p>First Class with Distinction</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+      <!-- Contact -->
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Open to collaborating on BI strategy, Power BI enablement, Fabric implementations, and analytics governance.</p>
+        <div class="cta-bar">
+          <a class="btn primary" href="mailto:Karrthik.madhavan@irishrail.ie">Email Karrthik</a>
+          <a class="btn" href="tel:+353894819401">Call</a>
+          <a class="btn" href="https://github.com/karrthikmadhavan/Portfollio/tree/main/Profile" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="note small" style="margin-top:14px">Tip: add LinkedIn and specific Power BI report links here when public links are available.</p>
+      </section>
+    </main>
 
+    <footer>
+      <small class="muted">© <span id="y"></span> Karrthik Madhavan • Built with semantic, accessible HTML • Dark‑mode ready</small>
+    </footer>
+  </div>
 
-	<div id="fh5co-features" class="animate-box">
-		<div class="container">
-			<div class="services-padding">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Expertise</h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 text-center" style="text-align: center;">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-hourglass"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Business and Data Analysis</h3>
-								<p>Analyse complex business data and then derive insights from it.</p>
-							</div>
-						</div>
-					</div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 
-					
-					<div class="col-md-4 text-center" style="text-align: center;">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-lightbulb"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Consulting</h3>
-								<p>Give suggestion on Business analysis, software development etc,.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 text-center" style="text-align: center;">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-browser"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Automation</h3>
-								<p>Develop Interactive Web Applications and automate manual intervention for analytics </p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-skills" class="animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Skills</h2>
-				</div>
-			</div>
-			<div class="my-container">
-				<div class="my-button">MS Excel</div>
-				<div class="my-button">Python</div>
-				<div class="my-button">R Programming</div>
-				<div class="my-button">SQL</div>
-				<div class="my-button">Machine Learning</div>
-				<div class="my-button">Predictive modelling</div>
-				<div class="my-button">AWS</div>
-				<div class="my-button">Heroku</div>
-				<div class="my-button">Django</div>
-				<div class="my-button">Data Analysis</div>
-				<div class="my-button">Tableau</div>
-				<div class="my-button">SQL</div>
-				<div class="my-button">Git</div>
-				<div class="my-button">Javascript</div>
-				<div class="my-button">Miro</div>
-				<div class="my-button">Visio</div>
-				<div class="my-button">Linux</div>
-				
-			</div>
-			<div style="text-align: center; padding-top: 2%;">
-				<h4>and many more <span style='font-size:20px;'>&#128578;</span></h4>
-			</div>
-		</div>
-	</div>
-
-	
-
-	<div id="fh5co-blog">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Hire Me!</h2>
-					<p style="color: black;">
-                    If you have an application that needs to be built, a problem that needs to be solved or a question to be answered, I would love to help you with it. Just drop me a mail and I will revert back to you at the earliest :)</p>
-					<p><a href="mailto:karrthikmadhavan@gmail.com"  target="_blank" class="contact-btn">Contact</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="fh5co-footer" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p style="color: white; text-align: center;">Karrthik Madhavan - Portfolio Website</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
-	</div>
-	
-
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Stellar Parallax -->
-	<script src="js/main.js"></script>
-	</body>
+  <!-- Structured data for richer previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Karrthik Madhavan",
+    "jobTitle": "Data Analyst",
+    "email": "mailto:Karrthik.madhavan@irishrail.ie",
+    "telephone": "+353894819401",
+    "address": {"@type":"PostalAddress","addressLocality":"Dublin","addressCountry":"IE"},
+    "url": "https://github.com/karrthikmadhavan/Portfollio",
+    "knowsAbout": ["Power BI","Microsoft Fabric","Azure Synapse","SQL","Python","Data Governance"],
+    "alumniOf": ["University College Cork","Anna University"]
+  }
+  </script>
+</body>
 </html>
