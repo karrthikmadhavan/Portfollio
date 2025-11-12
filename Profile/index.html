@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Karrthik Madhavan — Portfolio</title>
-  <meta name="description" content="Karrthik Madhavan — Data Analyst. Experience, Skills & Achievements, Certifications, and Hobbies."/>
+  <meta name="description" content="Karrthik Madhavan — Data Analyst. Experience, Skills & Achievements, Certifications & Education, and Hobbies."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,13 +13,13 @@
       --bg:#ffffff; --text:#0f172a; --muted:#475569; --border:#e5e7eb;
       --brand:#0BA360; --brand-2:#FF7A00; --brand-3:#13C26B; --ring: rgba(11,163,96,.25);
       --shadow: 0 10px 30px rgba(2,6,23,0.06); --radius: 0; /* sharp edges */
-      --step: clamp(0.9rem, 1.2vw + 0.7rem, 1.2rem);           /* body */
-      --step-1: clamp(1.1rem, 1.6vw + 0.6rem, 1.5rem);         /* h4 */
-      --step-2: clamp(1.25rem, 2vw + 0.7rem, 1.8rem);          /* h3 */
-      --step-3: clamp(1.5rem, 2.8vw + 0.6rem, 2.1rem);         /* h2 */
-      --step-4: clamp(1.8rem, 4vw + 0.6rem, 2.8rem);           /* hero */
-      --touch: 48px;                                           /* min touch target */
-      --container: 1100px;
+      --step: clamp(0.95rem, 1.2vw + 0.7rem, 1.25rem);           /* body */
+      --step-1: clamp(1.1rem, 1.6vw + 0.6rem, 1.55rem);          /* h4 */
+      --step-2: clamp(1.3rem, 2.2vw + 0.6rem, 1.9rem);           /* h3 */
+      --step-3: clamp(1.55rem, 3vw + 0.6rem, 2.2rem);            /* h2 */
+      --step-4: clamp(1.9rem, 4.4vw + 0.6rem, 3rem);             /* hero */
+      --touch: 52px;                                             /* min touch target */
+      --container: 1180px;
       --container-pad: clamp(16px, 3vw, 28px);
     }
     *{box-sizing:border-box}
@@ -34,82 +34,77 @@
     .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px var(--container-pad)}
     .brand{display:flex; align-items:center; gap:12px}
     .logo{width:40px; height:40px; color:#fff; font-weight:800; display:grid; place-items:center; background:conic-gradient(from 180deg, var(--brand), var(--brand-3), var(--brand), var(--brand-2)); box-shadow: var(--shadow)}
-    .brand h1{font-size: clamp(1rem, 1.4vw + .6rem, 1.25rem); margin:0}
+    .brand h1{font-size: clamp(1.05rem, 1.4vw + .6rem, 1.3rem); margin:0}
     .menu{display:flex; gap:8px; flex-wrap:wrap}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid var(--border); color:var(--text); background:#fff; min-height:var(--touch)}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border:1px solid var(--border); color:var(--text); background:#fff; min-height:var(--touch)}
     .pill.active{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
     .cta{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border:1px solid var(--brand); background:linear-gradient(135deg, var(--brand), var(--brand-3)); color:#fff; box-shadow:var(--shadow); min-height:var(--touch)}
 
     /* Shell */
-    .hero{margin-top:18px; position:relative; overflow:hidden; background: linear-gradient(180deg, rgba(11,163,96,.06), rgba(255,122,0,.06)); border:1px solid var(--border); padding: clamp(20px, 4vw, 36px)}
-    .big{font-size: var(--step-4); line-height:1.1; margin:0 0 8px}
+    .hero{margin-top:18px; position:relative; overflow:hidden; background: linear-gradient(180deg, rgba(11,163,96,.06), rgba(255,122,0,.06)); border:1px solid var(--border); padding: clamp(22px, 4.4vw, 42px)}
+    .big{font-size: var(--step-4); line-height:1.1; margin:0 0 10px}
     .sub{margin:0; color:var(--muted)}
-    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
-    .chip{padding:10px 14px; border:1px solid var(--border); background:#fff; font-size:1em; min-height:var(--touch)}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .chip{padding:12px 16px; border:1px solid var(--border); background:#fff; font-size:1em; min-height:var(--touch)}
 
-    section{margin: clamp(24px, 4vw, 40px) 0}
-    h2{font-size: var(--step-3); margin:0 0 14px}
-    .card{background:#fff; border:1px solid var(--border); padding: clamp(16px, 3vw, 24px); box-shadow:var(--shadow)}
+    section{margin: clamp(26px, 4vw, 44px) 0}
+    h2{font-size: var(--step-3); margin:0 0 16px}
+    .card{background:#fff; border:1px solid var(--border); padding: clamp(18px, 3.4vw, 26px); box-shadow:var(--shadow)}
     .muted{color:var(--muted)}
-    .list{margin:8px 0 0; padding-left:20px}
-    .grid{display:grid; gap: clamp(12px, 2.5vw, 20px)}
+    .list{margin:8px 0 0; padding-left:22px}
+    .grid{display:grid; gap: clamp(12px, 2.5vw, 22px)}
     .grid-2{grid-template-columns:1fr 1fr}
     @media(max-width:960px){.grid-2{grid-template-columns:1fr}}
 
     /* Roadmap: Vertical (desktop) / Horizontal (mobile) */
-    .exp-wrap{display:grid; gap: clamp(12px, 2.5vw, 20px); grid-template-columns: 280px 1fr}
+    .exp-wrap{display:grid; gap: clamp(12px, 2.5vw, 22px); grid-template-columns: 320px 1fr}
     @media(max-width:960px){.exp-wrap{grid-template-columns:1fr}}
     .years{position:relative; background:#fff; border:1px solid var(--border); padding:16px; box-shadow:var(--shadow)}
     .years .rail{position:absolute; left:28px; top:16px; bottom:16px; width:4px; background:linear-gradient(180deg, var(--brand), var(--brand-2));}
-    .year-list{margin:0; padding:0 0 0 48px; list-style:none; max-height:520px; overflow:auto}
-    .year-btn{display:flex; align-items:center; gap:10px; width:100%; text-align:left; padding:12px 14px; border:1px solid var(--border); background:#fff; cursor:pointer; min-height:var(--touch)}
+    .year-list{margin:0; padding:0 0 0 84px; list-style:none; max-height:560px; overflow:auto}
+    .year-btn{display:flex; align-items:center; gap:12px; width:100%; text-align:left; padding:16px 18px; border:2px solid var(--border); background:#fff; cursor:pointer; min-height:var(--touch); font-size: var(--step-2); font-weight:700}
     .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
-    .indicator {
-  position:absolute;
-  left:12px;
-  width:44px;
-  height:44px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#fff;
-  border:2px solid var(--border);
-  box-shadow:0 4px 12px rgba(0,0,0,.12);
-  transition:top .3s ease, left .3s ease;
-  border-radius:8px;
-  overflow:visible;
-  z-index:5;
-}
 
-.indicator svg,
-.indicator img {
-  width:32px;
-  height:32px;
-  display:block;
-  object-fit:contain;
-}
+    /* BIG, UNCROPPED INDICATOR */
+    .indicator{
+      position:absolute;
+      left:12px;
+      width:48px;
+      height:48px;
+      display:flex; align-items:center; justify-content:center;
+      background:#fff;
+      border:2px solid var(--border);
+      box-shadow:0 4px 12px rgba(0,0,0,.12);
+      transition:top .30s ease, left .30s ease;
+      border-radius:8px; /* sharp-ish */
+      overflow:visible; /* no cropping */
+      z-index:5;
+      pointer-events:none;
+      color:#FF7A00; /* all icons orange */
+    }
+    .indicator svg,.indicator img{width:34px; height:34px; display:block; object-fit:contain}
 
-
-    .details{background:#fff; border:1px solid var(--border); padding: clamp(14px, 2.5vw, 20px); box-shadow:var(--shadow)}
-    .detail-year{display:inline-block; margin-bottom:8px; padding:8px 12px; border:1px solid var(--border); background:#fff; font-weight:600}
-    .entry{padding:14px; border:1px dashed var(--border); margin-bottom:12px}
+    .details{background:#fff; border:1px solid var(--border); padding: clamp(16px, 2.5vw, 22px); box-shadow:var(--shadow)}
+    .detail-year{display:inline-block; margin-bottom:10px; padding:10px 14px; border:1px solid var(--border); background:#fff; font-weight:700}
+    .entry{padding:16px; border:1px dashed var(--border); margin-bottom:14px}
     .entry h4{margin:0 0 6px; font-size: var(--step-2)}
-    .meta{color:var(--muted); font-size: .95em}
+    .meta{color:var(--muted); font-size: .98em}
 
     /* Hobbies tabs */
     .tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px}
-    .tab{padding:10px 14px; border:1px solid var(--border); background:#fff; min-height:var(--touch)}
+    .tab{padding:12px 16px; border:1px solid var(--border); background:#fff; min-height:var(--touch)}
     .tab.active{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+
     footer{margin:40px 0 16px; text-align:center; color:var(--muted)}
 
     /* Mobile tweaks: years become horizontal tabs with a bottom rail */
     @media(max-width:600px){
-      .years{padding-bottom:28px}
-      .year-list{display:flex; gap:8px; padding:0; overflow:auto; max-height:none}
+      .years{padding-bottom:40px}
+      .year-list{display:flex; gap:10px; padding:0; overflow:auto; max-height:none}
       .year-list li{flex:0 0 auto}
-      .year-btn{padding:10px 12px}
-      .years .rail{left:0; right:0; height:4px; width:auto; bottom:12px; top:auto; background:linear-gradient(90deg, var(--brand), var(--brand-2))}
-      .indicator{top:auto; bottom:2px; left:0}
+      .year-btn{padding:14px 16px}
+      .years .rail{left:0; right:0; height:4px; width:auto; bottom:22px; top:auto; background:linear-gradient(90deg, var(--brand), var(--brand-2))}
+      .indicator{top:auto; bottom:6px; left:0}
     }
   </style>
 </head>
@@ -127,7 +122,7 @@
         <a class="pill" data-link href="#/">Home</a>
         <a class="pill" data-link href="#/experience">Experience</a>
         <a class="pill" data-link href="#/skills">Skills & Achievements</a>
-        <a class="pill" data-link href="#/certifications">Certifications</a>
+        <a class="pill" data-link href="#/certifications">Certifications & Education</a>
         <a class="pill" data-link href="#/hobbies">Hobbies</a>
         <a class="cta" href="mailto:Karrthik.madhavan@irishrail.ie">Contact</a>
       </nav>
@@ -140,14 +135,12 @@
   </div>
 
   <script>
-  // Robust boot: guard against errors and always attempt to render
   (function(){
     try {
       document.getElementById('y').textContent = new Date().getFullYear();
-
       const app = document.getElementById('app');
 
-      // --- Pages ---
+      /* ---------------- PAGES ---------------- */
       const pages = {
         home(){
           document.title = 'Home — Karrthik Madhavan';
@@ -213,28 +206,27 @@
           ].join('');
         },
         certifications(){
-  document.title = 'Certifications & Education — Karrthik Madhavan';
-  return [
-    '<section class="card">',
-      '<h2>Certifications</h2>',
-      '<ul class="list">',
-        '<li>Microsoft Certified: <strong>Power BI Data Analyst Associate (PL-300)</strong></li>',
-        '<li>Lean and Six Sigma Principles — University of Limerick</li>',
-        '<li>Certified Scrum Master (CSM)</li>',
-        '<li>Fabric Analytics Engineer Associate (DP-600) — <em>in progress</em></li>',
-        '<li>SAP Analytics Cloud — <em>in progress</em></li>',
-      '</ul>',
-    '</section>',
-    '<section class="card">',
-      '<h2>Education</h2>',
-      '<ul class="list">',
-        '<li><strong>MSc, Business Information & Analytics Systems</strong> — University College Cork (2021–2022, 1:1)</li>',
-        '<li><strong>B.E., Electronics & Communication Engineering</strong> — Anna University (2013–2017, First Class)</li>',
-      '</ul>',
-    '</section>'
-  ].join('');
-}
-,
+          document.title = 'Certifications & Education — Karrthik Madhavan';
+          return [
+            '<section class="card">',
+              '<h2>Certifications</h2>',
+              '<ul class="list">',
+                '<li>Microsoft Certified: <strong>Power BI Data Analyst Associate (PL‑300)</strong></li>',
+                '<li>Lean and Six Sigma Principles — University of Limerick</li>',
+                '<li>Certified Scrum Master (CSM)</li>',
+                '<li>Fabric Analytics Engineer Associate (DP‑600) — <em>in progress</em></li>',
+                '<li>SAP Analytics Cloud — <em>in progress</em></li>',
+              '</ul>',
+            '</section>',
+            '<section class="card">',
+              '<h2>Education</h2>',
+              '<ul class="list">',
+                '<li><strong>MSc, Business Information & Analytics Systems</strong> — University College Cork (2021–2022, 1:1)</li>',
+                '<li><strong>B.E., Electronics & Communication Engineering</strong> — Anna University (2013–2017, First Class)</li>',
+              '</ul>',
+            '</section>'
+          ].join('');
+        },
         hobbies(sub){
           const tabs = ['tennis','badminton','boxing','photography','dinghy-sailing'];
           const names = {tennis:'Tennis',badminton:'Badminton',boxing:'Boxing',photography:'Photography','dinghy-sailing':'Dinghy Sailing'};
@@ -266,7 +258,7 @@
         }
       };
 
-      // --- Router ---
+      /* ---------------- ROUTER ---------------- */
       function setActive(link){
         document.querySelectorAll('.pill').forEach(a=>a.classList.remove('active'));
         if(link) link.classList.add('active');
@@ -304,7 +296,7 @@
       window.addEventListener('hashchange', render);
       if(!location.hash){ location.hash = '#/'; }
 
-      // --- Experience data + init ---
+      /* -------------- EXPERIENCE DATA + INIT -------------- */
       const experienceData = {
         2017: [{title:'Quality Analyst', company:'Amazon', org:'amazon', location:'Chennai', period:'Mar 2017 – Dec 2018', points:['Analytics & validation across retail catalogues','Built early automations to remove manual checks']}],
         2018: [{title:'Quality Analyst', company:'Amazon', org:'amazon', location:'Chennai', period:'All year', points:['Scaled QA playbooks and SOPs','Partnered with SDE/DS for data capture']}],
@@ -317,7 +309,7 @@
         2022: [{title:'Postgraduate Teaching Assistant', company:'University College Cork', org:'ucc', location:'Cork', period:'Jan – Aug 2022', points:['Guided SQL, Python & viz; assessment support']}],
         2023: [{title:'Data Analyst — Data Analytics & Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Feb – Dec 2023', points:['KPI hubs for Finance & Engineering (CCE/CME)','Power BI governance & testing frameworks']}],
         2024: [{title:'Data Analyst — DAI', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'All year', points:['Active analytics users up 1,300% (2024→P11 2025)','Fabric adoption; model/perf optimisation']}],
-        2025: [{title:'Data Analyst — DAI', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'To date', points:['6,052 total dashboard views by P11 2025','10+ leadership‑adopted dashboards']}]
+        2025: [{title:'Data Analyst — DAI', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'To date', points:['6,052 dashboard views by P11 2025','10+ leadership‑adopted dashboards']}]
       };
 
       function initExperience(){
@@ -334,38 +326,40 @@
         ).join('');
 
         const mm = window.matchMedia('(max-width:600px)');
+
+        // ORG ICONS — real types per your request, all orange
+        const svgs = {
+          amazon: `
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M7 9l1.5-4.5A2 2 0 0 1 10.4 3h3.2a2 2 0 0 1 1.9 1.5L17 9h3a1 1 0 1 1 0 2h-1.1l-1.2 8.2A2 2 0 0 1 15.7 21H8.3a2 2 0 0 1-2-1.8L5.1 11H4a1 1 0 1 1 0-2h3zm2.2-2L8.4 9h7.2l-0.8-2.4A1 1 0 0 0 14 6h-4a1 1 0 0 0-.8.5zM7.1 11l1.1 7.6a1 1 0 0 0 1 .9h7.6a1 1 0 0 0 1-.9L18.9 11H7.1z"/>
+            </svg>
+          `,
+          ucc: `
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M3 4h14a2 2 0 0 1 2 2v6h2v2h-2v2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v8h16V6H3z"/>
+              <circle cx="7.5" cy="16.5" r="1.5"/>
+              <path d="M9 14.5h3.5a2 2 0 0 1 2 2V19H7v-2a2 2 0 0 1 2-2z"/>
+            </svg>
+          `,
+          irishrail: `
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M7 20l-2 2h2l2-2h6l2 2h2l-2-2h1a3 3 0 0 0 3-3V7a5 5 0 0 0-5-5H10A5 5 0 0 0 5 7v10a3 3 0 0 0 3 3h-1zm8-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM9 17a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8-8H7V7a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v2z"/>
+            </svg>
+          `
+        };
+
         function orgForYear(y){
           if(y>=2023) return 'irishrail';
           if(y>=2021 && y<=2022) return 'ucc';
           return 'amazon';
         }
-        const svgs = {
-  amazon: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF9900" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
-      256-114.6 256-256S397.4 0 256 0zm74.5 367.3c-32.4 13.3-67.4 20.4-104.5 20.4
-      -60.5 0-114.9-22.4-156.2-59.7-4.4-4-1.2-9.4 4.8-6.3
-      44.4 25.9 99.3 41.5 156.3 41.5 38.4 0 79.8-7.8 118.1-23.8
-      5.8-2.4 10.7 3.7 4.5 8zM383.7 344c-5.7-7.5-37.4-3.6-51.6-1.8
-      -4.3.5-5-3.2-1.1-6 25.3-17.8 66.8-12.6 71.6-6.7 4.8 5.9-1.3 39.3-23.8 55.7
-      -3.6 2.6-7.2 1.2-5.5-2.6 6.6-15.2 14.4-31.1 15.8-38.6z"/>
-  </svg>`,
-  
-  ucc: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF7A00" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
-      256-114.6 256-256S397.4 0 256 0zm-47 360h94v-32h-30V192h30v-32h-94v32h30v136h-30v32z"/>
-  </svg>`,
-
-  irishrail: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF7A00" d="M480 352H32L64 288h384l32 64zM416 288l-64-128H160l-64 128h320zM192 384a32 32 0 1 0 0-64 32 32 0 0 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 0 0 0 64z"/>
-  </svg>`
-};
 
         function setIndicator(year){
           const btn = yearsEl.querySelector('button[data-year="'+year+'"]');
           if(!btn) return;
           const org = orgForYear(year);
           indicator.innerHTML = svgs[org];
-          indicator.style.color = (org==='amazon')? '#FF9900' : (org==='ucc'? '#002663' : '#0BA360');
+          indicator.style.color = '#FF7A00'; // force orange icons
           const yearsContainer = yearsEl.closest('.years');
           const cBox = yearsContainer.getBoundingClientRect();
           const bBox = btn.getBoundingClientRect();
@@ -403,7 +397,7 @@
           renderYear(+btn.dataset.year);
         });
 
-        function reflowIndicator(){
+        function reflow(){
           const pressed = yearsEl.querySelector('.year-btn[aria-pressed="true"]');
           if(pressed) setIndicator(+pressed.dataset.year);
         }
@@ -424,108 +418,11 @@
           e.preventDefault();
         });
 
-        window.addEventListener('resize', reflowIndicator);
-        mm.addEventListener('change', reflowIndicator);
-      }{
-        const yearsEl = document.getElementById('expYears');
-        const detailsEl = document.getElementById('expDetails');
-        const indicator = document.getElementById('yearIndicator');
-        if(!yearsEl || !detailsEl || !indicator) return;
-
-        const years = Object.keys(experienceData).map(Number).sort((a,b)=>b-a);
-        yearsEl.innerHTML = years.map((y,i)=>
-          '<li data-year="'+y+'" style="margin-bottom:8px">\
-             <button class="year-btn" data-year="'+y+'" aria-pressed="'+(i===0)+'"><strong>'+y+'</strong></button>\
-           </li>'
-        ).join('');
-
-        function orgForYear(y){
-          if(y>=2023) return 'irishrail';
-          if(y>=2021 && y<=2022) return 'ucc';
-          return 'amazon';
-        }
-
-        const svgs = {
-  amazon: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF9900" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
-      256-114.6 256-256S397.4 0 256 0zm74.5 367.3c-32.4 13.3-67.4 20.4-104.5 20.4
-      -60.5 0-114.9-22.4-156.2-59.7-4.4-4-1.2-9.4 4.8-6.3
-      44.4 25.9 99.3 41.5 156.3 41.5 38.4 0 79.8-7.8 118.1-23.8
-      5.8-2.4 10.7 3.7 4.5 8zM383.7 344c-5.7-7.5-37.4-3.6-51.6-1.8
-      -4.3.5-5-3.2-1.1-6 25.3-17.8 66.8-12.6 71.6-6.7 4.8 5.9-1.3 39.3-23.8 55.7
-      -3.6 2.6-7.2 1.2-5.5-2.6 6.6-15.2 14.4-31.1 15.8-38.6z"/>
-  </svg>`,
-  
-  ucc: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF7A00" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256
-      256-114.6 256-256S397.4 0 256 0zm-47 360h94v-32h-30V192h30v-32h-94v32h30v136h-30v32z"/>
-  </svg>`,
-
-  irishrail: `<svg viewBox="0 0 512 512" aria-hidden="true">
-    <path fill="#FF7A00" d="M480 352H32L64 288h384l32 64zM416 288l-64-128H160l-64 128h320zM192 384a32 32 0 1 0 0-64 32 32 0 0 0 0 64zm128 0a32 32 0 1 0 0-64 32 32 0 0 0 0 64z"/>
-  </svg>`
-};
-
-        function setIndicator(year){
-          const btn = yearsEl.querySelector('button[data-year="'+year+'"]');
-          if(!btn) return;
-          const org = orgForYear(year);
-          indicator.innerHTML = svgs[org];
-          indicator.style.color = (org==='amazon')? '#FF9900' : (org==='ucc'? '#002663' : '#0BA360');
-          const yearsContainer = yearsEl.closest('.years');
-          const containerBox = yearsContainer.getBoundingClientRect();
-          const btnBox = btn.getBoundingClientRect();
-          const offset = (btnBox.top - containerBox.top) + (btnBox.height/2);
-          indicator.style.top = offset + 'px';
-        }
-
-        function renderYear(y){
-          const entries = experienceData[y]||[];
-          detailsEl.innerHTML = '<span class="detail-year">'+y+'</span>' + entries.map(function(e){
-            return '<div class="entry">\
-              <h4>'+e.title+'</h4>\
-              <div class="meta">'+e.company+' • '+e.location+' • '+e.period+'</div>\
-              <ul class="list">'+ e.points.map(p=>'<'+'li>'+p+'</li>').join('') +'</ul>\
-            </div>';
-          }).join('');
-          setIndicator(y);
-        }
-
-        // initial render
-        renderYear(years[0]);
-
-        yearsEl.addEventListener('click', function(e){
-          const btn = e.target.closest('.year-btn');
-          if(!btn) return;
-          yearsEl.querySelectorAll('.year-btn').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
-          btn.setAttribute('aria-pressed','true');
-          renderYear(+btn.dataset.year);
-        });
-
-        yearsEl.addEventListener('keydown', function(e){
-          const keys = ['ArrowUp','ArrowDown','Home','End'];
-          if(keys.indexOf(e.key)===-1) return;
-          const items = Array.from(yearsEl.querySelectorAll('.year-btn'));
-          const i = items.indexOf(document.activeElement);
-          let j = i;
-          if(e.key==='ArrowUp') j = Math.max(0, i-1);
-          if(e.key==='ArrowDown') j = Math.min(items.length-1, i+1);
-          if(e.key==='Home') j = 0;
-          if(e.key==='End') j = items.length-1;
-          items[j].focus();
-          items.forEach(function(b){ b.setAttribute('aria-pressed','false'); });
-          items[j].setAttribute('aria-pressed','true');
-          renderYear(+items[j].dataset.year);
-          e.preventDefault();
-        });
-
-        window.addEventListener('resize', function(){
-          const pressed = yearsEl.querySelector('.year-btn[aria-pressed="true"]');
-          if(pressed) setIndicator(+pressed.dataset.year);
-        });
+        window.addEventListener('resize', reflow);
+        mm.addEventListener('change', reflow);
       }
 
-      // First render
+      // Kick off
       render();
 
     } catch(err){
