@@ -57,6 +57,7 @@
       color:var(--text);
       background:#fff;
       min-height:var(--touch);
+      white-space:nowrap;
     }
     .pill.active{
       border-color:var(--brand);
@@ -72,6 +73,7 @@
       color:#fff;
       box-shadow:var(--shadow);
       min-height:var(--touch);
+      white-space:nowrap;
     }
 
     /* Shell / hero */
@@ -157,10 +159,7 @@
       box-shadow:0 0 0 3px var(--ring);
       background:#f0fdf4;
     }
-    .year-icon{
-      font-size:1.25rem;
-      line-height:1;
-    }
+    .year-icon{font-size:1.25rem; line-height:1;}
 
     .details{
       background:#fff;
@@ -218,20 +217,31 @@
 
     footer{margin:40px 0 16px; text-align:center; color:var(--muted)}
 
-    /* Mobile timeline tweaks */
+    /* Mobile experience timeline tweaks */
     @media(max-width:600px){
-      .years{padding-bottom:12px}
-      .years .rail{
-        left:0; right:0; height:4px; width:auto;
-        bottom:auto; top:12px;
-        background:linear-gradient(90deg, var(--brand), var(--brand-2));
-      }
+      .years{padding-bottom:40px}
       .year-list{
         flex-direction:row;
-        padding:26px 0 0;
+        padding:0;
         overflow-x:auto;
       }
       .year-list li{flex:0 0 auto}
+      .year-btn{padding:12px 14px}
+      .years .rail{
+        left:0; right:0; height:4px; width:auto;
+        bottom:22px; top:auto;
+        background:linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+    }
+
+    /* Mobile layout general (all other pages) */
+    @media(max-width:720px){
+      .nav-inner{flex-direction:column; align-items:flex-start}
+      .menu{width:100%; overflow-x:auto; padding-bottom:4px}
+      .pill,.cta{flex:0 0 auto}
+      .hero{margin-top:12px; padding:18px}
+      section{margin:22px 0}
+      .card{padding:16px}
     }
   </style>
 </head>
@@ -275,8 +285,8 @@
           return [
             '<section class="hero">',
               '<p class="sub">Data Analytics : Power BI : Microsoft Fabric</p>',
-              '<h2 class="big">Data analyst turning operational data into reliable decisions for rail and e-commerce.</h2>',
-              '<p class="muted">Based in Dublin, I specialise in building governed analytics products : from KPI models and occupancy reporting to finance, maintenance and sustainability dashboards. Current role: Data Analyst in the Data Analytics &amp; Intelligence team at Iarnród Éireann (Irish Rail).</p>',
+              '<h2 class="big">Data analyst turning operational data into reliable decisions for transport and e-commerce.</h2>',
+              '<p class="muted">Based in Dublin, I specialise in building governed analytics products : from KPI models and maintenance reporting to finance and sustainability dashboards. Current role: Data Analyst in the Data Analytics &amp; Intelligence team at Iarnród Éireann (Irish Rail).</p>',
               '<div class="chips" aria-label="Focus areas">',
                 '<span class="chip">Power BI (DAX / M / RLS)</span>',
                 '<span class="chip">Microsoft Fabric (Lakehouse / Warehouse)</span>',
@@ -290,10 +300,10 @@
               '<h2>Who I am</h2>',
               '<div class="grid grid-2">',
                 '<div>',
-                  '<h3>Analytics across rail, retail and academia</h3>',
+                  '<h3>Analytics across transport, retail and academia</h3>',
                   '<ul class="list">',
-                    '<li><strong>Irish Rail (DAI)</strong> : delivering CCE &amp; CME maintenance, occupancy, finance and CSRD sustainability reports on Power BI and Fabric.</li>',
-                    '<li><strong>Amazon</strong> : 4+ years across quality, forecasting and ETL automation, including 200+ ETL jobs and leading a 12-member team.</li>',
+                    '<li><strong>Irish Rail (DAI)</strong> : delivering CCE &amp; CME maintenance, finance and CSRD sustainability reports on Power BI and Fabric.</li>',
+                    '<li><strong>Amazon</strong> : around 5 years across quality, forecasting and ETL automation, including 200+ ETL jobs and leading a 12-member team.</li>',
                     '<li><strong>UCC</strong> : postgraduate teaching assistant for Business Analytics and Web Application Development.</li>',
                   '</ul>',
                 '</div>',
@@ -314,7 +324,7 @@
                 '<div>',
                   '<ul class="list">',
                     '<li><strong>8+ years</strong> across data analytics, quality and BI.</li>',
-                    '<li><strong>Public transport focus</strong> on CCE &amp; CME maintenance, occupancy and finance.</li>',
+                    '<li><strong>Public transport focus</strong> on CCE &amp; CME maintenance and finance.</li>',
                     '<li><strong>Power BI &amp; Fabric</strong> used daily for modelling, reporting and governance.</li>',
                     '<li><strong>MSc (First Class)</strong> in Business Information &amp; Analytics Systems (UCC).</li>',
                   '</ul>',
