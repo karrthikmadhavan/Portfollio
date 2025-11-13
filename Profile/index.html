@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Karrthik Madhavan : Portfolio</title>
-  <meta name="description" content="Karrthik Madhavan : Data Analyst. Experience, Skills & Achievements, Certifications & Education, and Hobbies."/>
+  <meta name="description" content="Karrthik Madhavan : Data Analyst. Experience, Skills & Achievements, Certifications & Education, and Hobbies.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,31 +12,52 @@
     :root{
       --bg:#ffffff; --text:#0f172a; --muted:#475569; --border:#e5e7eb;
       --brand:#0BA360; --brand-2:#FF7A00; --brand-3:#13C26B; --ring: rgba(11,163,96,.25);
-      --shadow: 0 10px 30px rgba(2,6,23,0.06); --radius: 0; /* sharp edges */
-      --step: clamp(0.95rem, 1.2vw + 0.7rem, 1.25rem);           /* body */
-      --step-1: clamp(1.1rem, 1.6vw + 0.6rem, 1.55rem);          /* h4 */
-      --step-2: clamp(1.3rem, 2.2vw + 0.6rem, 1.9rem);           /* h3 */
-      --step-3: clamp(1.55rem, 3vw + 0.6rem, 2.2rem);            /* h2 */
-      --step-4: clamp(1.9rem, 4.4vw + 0.6rem, 3rem);             /* hero */
-      --touch: 52px;                                             /* min touch target */
+      --shadow: 0 10px 30px rgba(2,6,23,0.06); --radius:0;
+      --step: clamp(0.95rem, 1.2vw + 0.7rem, 1.25rem);
+      --step-1: clamp(1.1rem, 1.6vw + 0.6rem, 1.55rem);
+      --step-2: clamp(1.3rem, 2.2vw + 0.6rem, 1.9rem);
+      --step-3: clamp(1.55rem, 3vw + 0.6rem, 2.2rem);
+      --step-4: clamp(1.9rem, 4.4vw + 0.6rem, 3rem);
+      --touch: 52px;
       --container: 1180px;
       --container-pad: clamp(16px, 3vw, 28px);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0; font: var(--step)/1.65 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial; color:var(--text); background:var(--bg)}
+    body{
+      margin:0;
+      font: var(--step)/1.65 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+      color:var(--text); background:var(--bg)
+    }
     a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
     .container{max-width:var(--container); margin:auto; padding:var(--container-pad)}
 
     /* Nav */
-    .nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,255,255,.96); border-bottom:1px solid var(--border)}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(160%) blur(8px);
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--border)
+    }
     .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px var(--container-pad)}
     .brand{display:flex; align-items:center; gap:12px}
-    .logo{width:40px; height:40px; color:#fff; font-weight:800; display:grid; place-items:center; background:conic-gradient(from 180deg, var(--brand), var(--brand-3), var(--brand), var(--brand-2)); box-shadow: var(--shadow)}
+    .logo{
+      width:40px; height:40px; color:#fff; font-weight:800;
+      display:grid; place-items:center;
+      background:conic-gradient(from 180deg, var(--brand), var(--brand-3), var(--brand), var(--brand-2));
+      box-shadow: var(--shadow)
+    }
     .brand h1{font-size: clamp(1.05rem, 1.4vw + .6rem, 1.3rem); margin:0}
     .menu{display:flex; gap:8px; flex-wrap:nowrap}
-    .pill{display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border:1px solid var(--border); color:var(--text); background:#fff; min-height:var(--touch)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:12px 16px;
+      border:1px solid var(--border);
+      color:var(--text);
+      background:#fff;
+      min-height:var(--touch);
+    }
     .pill.active{
       border-color:var(--brand);
       background:var(--brand);
@@ -50,35 +71,67 @@
       background:var(--brand-2);
       color:#fff;
       box-shadow:var(--shadow);
-      min-height:var(--touch)}
+      min-height:var(--touch);
+    }
 
-    /* Shell */
-    .hero{margin-top:18px; position:relative; overflow:hidden; background: linear-gradient(180deg, rgba(11,163,96,.06), rgba(255,122,0,.06)); border:1px solid var(--border); padding: clamp(22px, 4.4vw, 42px)}
+    /* Shell / hero */
+    .hero{
+      margin-top:18px; position:relative; overflow:hidden;
+      background: linear-gradient(180deg, rgba(11,163,96,.06), rgba(255,122,0,.06));
+      border:1px solid var(--border);
+      padding: clamp(22px, 4.4vw, 42px);
+    }
     .big{font-size: var(--step-4); line-height:1.1; margin:0 0 10px}
     .sub{margin:0; color:var(--muted)}
     .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .chip{padding:12px 16px; border:1px solid var(--border); background:#fff; font-size:1em; min-height:var(--touch)}
+    .chip{
+      padding:12px 16px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:1em;
+      min-height:var(--touch);
+    }
 
     section{margin: clamp(26px, 4vw, 44px) 0}
     h2{font-size: var(--step-3); margin:0 0 16px}
-    .card{background:#fff; border:1px solid var(--border); padding: clamp(18px, 3.4vw, 26px); box-shadow:var(--shadow)}
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      padding: clamp(18px, 3.4vw, 26px);
+      box-shadow:var(--shadow);
+    }
     .muted{color:var(--muted)}
     .list{margin:8px 0 0; padding-left:22px}
     .grid{display:grid; gap: clamp(12px, 2.5vw, 22px)}
     .grid-2{grid-template-columns:1fr 1fr}
     @media(max-width:960px){.grid-2{grid-template-columns:1fr}}
 
-    /* Roadmap: Vertical (desktop) / Horizontal (mobile) */
-    .exp-wrap{display:grid; gap: clamp(12px, 2.5vw, 22px); grid-template-columns: 220px 1fr}
+    /* Experience roadmap */
+    .exp-wrap{
+      display:grid;
+      gap: clamp(12px, 2.5vw, 22px);
+      grid-template-columns: 220px 1fr;
+    }
     @media(max-width:960px){.exp-wrap{grid-template-columns:1fr}}
-    .years{position:relative; background:#fff; border:1px solid var(--border); padding:16px; box-shadow:var(--shadow)}
-    .years .rail{position:absolute; left:28px; top:16px; bottom:16px; width:4px; background:linear-gradient(180deg, var(--brand), var(--brand-2));}
+    .years{
+      position:relative;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .years .rail{
+      position:absolute;
+      left:28px;
+      top:16px;
+      bottom:16px;
+      width:4px;
+      background:linear-gradient(180deg, var(--brand), var(--brand-2));
+    }
     .year-list{
       margin:0;
       padding:0 0 0 68px;
       list-style:none;
-      max-height:none;
-      overflow:visible;
       display:flex;
       flex-direction:column;
       gap:4px;
@@ -87,7 +140,7 @@
       display:flex;
       align-items:center;
       justify-content:flex-start;
-      gap:6px;
+      gap:8px;
       width:100%;
       text-align:left;
       padding:6px 8px;
@@ -99,60 +152,86 @@
       font-weight:600;
       transition:all .2s ease;
     }
-    .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
-    .year-btn[aria-pressed="true"]{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+    .year-btn[aria-pressed="true"]{
+      border-color:var(--brand);
+      box-shadow:0 0 0 3px var(--ring);
+      background:#f0fdf4;
+    }
+    .year-icon{
+      font-size:1.25rem;
+      line-height:1;
+    }
 
-    /* BIG, UNCROPPED INDICATOR */
-    .indicator{
-      position:absolute;
-      left:8px;
-      width:56px;
-      height:56px;
-      display:flex; align-items:center; justify-content:center;
+    .details{
       background:#fff;
-      border:2px solid var(--border);
-      box-shadow:0 4px 14px rgba(0,0,0,.14);
-      transition:top .30s ease, left .30s ease;
-      border-radius:6px;
-      overflow:visible;
-      z-index:5;
-      color:#FF7A00;
+      border:1px solid var(--border);
+      padding: clamp(16px, 2.5vw, 22px);
+      box-shadow:var(--shadow);
     }
-    .indicator svg,
-    .indicator img{
-      width:32px;
-      height:32px;
-      display:block;
-      object-fit:contain;
+    .detail-year{
+      display:inline-block;
+      margin-bottom:10px;
+      padding:10px 14px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-weight:700;
     }
-    .indicator svg,.indicator img{width:34px; height:34px; display:block; object-fit:contain}
-
-    .details{background:#fff; border:1px solid var(--border); padding: clamp(16px, 2.5vw, 22px); box-shadow:var(--shadow)}
-    .detail-year{display:inline-block; margin-bottom:10px; padding:10px 14px; border:1px solid var(--border); background:#fff; font-weight:700}
-    .entry{padding:16px; border:1px dashed var(--border); margin-bottom:14px}
-    .entry h4{margin:0 0 6px; font-size: var(--step-2)}
-    .meta{color:var(--muted); font-size: .98em; margin-bottom:6px}
+    .entry{
+      padding:16px;
+      border:1px dashed var(--border);
+      margin-bottom:14px;
+    }
+    .entry h4{margin:0 0 6px; font-size:var(--step-2)}
+    .meta{color:var(--muted); font-size:.98em; margin-bottom:6px}
     .impact-block{margin:10px 0 8px}
-    .impact-label,.section-label,.stack-label{font-size:.9em;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:4px;display:block}
+    .impact-label,.section-label,.stack-label{
+      font-size:.9em;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      color:var(--muted);
+      margin-bottom:4px;
+      display:block;
+    }
     .impact-chips{display:flex;flex-wrap:wrap;gap:6px}
-    .impact-chip{padding:4px 8px;border:1px solid rgba(11,163,96,.2);background:rgba(11,163,96,.04);font-size:.85em;white-space:nowrap;border-radius:0}
+    .impact-chip{
+      padding:4px 8px;
+      border:1px solid rgba(11,163,96,.2);
+      background:rgba(11,163,96,.04);
+      font-size:.85em;
+      white-space:nowrap;
+    }
     .stack-line{margin-top:10px;font-size:.9em;color:var(--muted)}
 
-    /* Hobbies tabs */
+    /* Hobbies */
     .tabs{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px}
-    .tab{padding:12px 16px; border:1px solid var(--border); background:#fff; min-height:var(--touch)}
-    .tab.active{border-color:var(--brand); box-shadow:0 0 0 3px var(--ring)}
+    .tab{
+      padding:12px 16px;
+      border:1px solid var(--border);
+      background:#fff;
+      min-height:var(--touch);
+    }
+    .tab.active{
+      border-color:var(--brand);
+      box-shadow:0 0 0 3px var(--ring);
+    }
 
     footer{margin:40px 0 16px; text-align:center; color:var(--muted)}
 
-    /* Mobile tweaks: years become horizontal tabs with a bottom rail */
+    /* Mobile timeline tweaks */
     @media(max-width:600px){
-      .years{padding-bottom:40px}
-      .year-list{display:flex; gap:10px; padding:0; overflow:auto; max-height:none}
+      .years{padding-bottom:12px}
+      .years .rail{
+        left:0; right:0; height:4px; width:auto;
+        bottom:auto; top:12px;
+        background:linear-gradient(90deg, var(--brand), var(--brand-2));
+      }
+      .year-list{
+        flex-direction:row;
+        padding:26px 0 0;
+        overflow-x:auto;
+      }
       .year-list li{flex:0 0 auto}
-      .year-btn{padding:14px 16px}
-      .years .rail{left:0; right:0; height:4px; width:auto; bottom:22px; top:auto; background:linear-gradient(90deg, var(--brand), var(--brand-2))}
-      .indicator{top:auto; bottom:6px; left:0}
     }
   </style>
 </head>
@@ -160,6 +239,7 @@
   <noscript>
     <div class="container"><p>Please enable JavaScript to view the site.</p></div>
   </noscript>
+
   <div class="nav">
     <div class="nav-inner container">
       <div class="brand">
@@ -169,8 +249,8 @@
       <nav class="menu" aria-label="Primary">
         <a class="pill" data-link href="#/">Home</a>
         <a class="pill" data-link href="#/experience">Experience</a>
-        <a class="pill" data-link href="#/skills">Skills & Achievements</a>
-        <a class="pill" data-link href="#/certifications">Certifications & Education</a>
+        <a class="pill" data-link href="#/skills">Skills &amp; Achievements</a>
+        <a class="pill" data-link href="#/certifications">Certifications &amp; Education</a>
         <a class="pill" data-link href="#/hobbies">Hobbies</a>
         <a class="cta" href="mailto:Karrthik.madhavan@irishrail.ie">Contact</a>
       </nav>
@@ -184,45 +264,90 @@
 
   <script>
   (function(){
-    try {
+    try{
       document.getElementById('y').textContent = new Date().getFullYear();
       const app = document.getElementById('app');
 
-      /* ---------------- PAGES ---------------- */
+      /* ---------- PAGES ---------- */
       const pages = {
         home(){
           document.title = 'Home : Karrthik Madhavan';
           return [
             '<section class="hero">',
-              '<p class="sub">Data Analytics • Power BI • Microsoft Fabric</p>',
-              '<h2 class="big">I turn data into decisions with clean models, useful dashboards, and strong governance.</h2>',
-              '<p class="muted">8+ years across transport & e‑commerce. Data Analyst at Iarnród Éireann (Irish Rail).</p>',
+              '<p class="sub">Data Analytics : Power BI : Microsoft Fabric</p>',
+              '<h2 class="big">Data analyst turning operational data into reliable decisions for rail and e-commerce.</h2>',
+              '<p class="muted">Based in Dublin, I specialise in building governed analytics products : from KPI models and occupancy reporting to finance, maintenance and sustainability dashboards. Current role: Data Analyst in the Data Analytics &amp; Intelligence team at Iarnród Éireann (Irish Rail).</p>',
               '<div class="chips" aria-label="Focus areas">',
-                '<span class="chip">Power BI (DAX/M/RLS)</span>',
-                '<span class="chip">Microsoft Fabric (Lakehouse/Warehouse)</span>',
-                '<span class="chip">Azure Synapse</span>',
-                '<span class="chip">SQL & Python</span>',
-                '<span class="chip">Governance & QA</span>',
+                '<span class="chip">Power BI (DAX / M / RLS)</span>',
+                '<span class="chip">Microsoft Fabric (Lakehouse / Warehouse)</span>',
+                '<span class="chip">SAP PM / MM / FICO reporting</span>',
+                '<span class="chip">Data modelling &amp; governance</span>',
+                '<span class="chip">Stakeholder-focused delivery</span>',
+              '</div>',
+            '</section>',
+
+            '<section class="card">',
+              '<h2>Who I am</h2>',
+              '<div class="grid grid-2">',
+                '<div>',
+                  '<h3>Analytics across rail, retail and academia</h3>',
+                  '<ul class="list">',
+                    '<li><strong>Irish Rail (DAI)</strong> : delivering CCE &amp; CME maintenance, occupancy, finance and CSRD sustainability reports on Power BI and Fabric.</li>',
+                    '<li><strong>Amazon</strong> : 4+ years across quality, forecasting and ETL automation, including 200+ ETL jobs and leading a 12-member team.</li>',
+                    '<li><strong>UCC</strong> : postgraduate teaching assistant for Business Analytics and Web Application Development.</li>',
+                  '</ul>',
+                '</div>',
+                '<div>',
+                  '<h3>What I am known for</h3>',
+                  '<ul class="list">',
+                    '<li>Designing clear KPI models and semantic layers that business teams understand and trust.</li>',
+                    '<li>Translating complex source systems (SAP, AIMS, TOPS, SRPSS, FieldReach) into usable, governed datasets.</li>',
+                    '<li>Partnering with stakeholders to land reports that are actually used in senior forums and day-to-day decisions.</li>',
+                  '</ul>',
+                '</div>',
+              '</div>',
+            '</section>',
+
+            '<section class="card">',
+              '<h2>At a glance</h2>',
+              '<div class="grid grid-2">',
+                '<div>',
+                  '<ul class="list">',
+                    '<li><strong>8+ years</strong> across data analytics, quality and BI.</li>',
+                    '<li><strong>Public transport focus</strong> on CCE &amp; CME maintenance, occupancy and finance.</li>',
+                    '<li><strong>Power BI &amp; Fabric</strong> used daily for modelling, reporting and governance.</li>',
+                    '<li><strong>MSc (First Class)</strong> in Business Information &amp; Analytics Systems (UCC).</li>',
+                  '</ul>',
+                '</div>',
+                '<div>',
+                  '<ul class="list">',
+                    '<li><strong>+1,300% analytics adoption</strong> (17 → 241 users) in Irish Rail DAI.</li>',
+                    '<li><strong>6,052 dashboard views</strong> by Period 11 2025 across Finance, CCE and CME.</li>',
+                    '<li><strong>10+ leadership dashboards</strong> including CCE IM Review and CSRD reports.</li>',
+                    '<li><strong>Community roles</strong> : Safety Representative (Loop line : Connolly) and Tennis Council Member at Balrothery Tennis Club.</li>',
+                  '</ul>',
+                '</div>',
               '</div>',
             '</section>'
           ].join('');
         },
+
         experience(){
           document.title = 'Experience : Karrthik Madhavan';
           return [
             '<section class="card">',
-              '<h2>Experience : Yearly Roadmap</h2>',
+              '<h2>Experience</h2>',
               '<div class="exp-wrap">',
-                '<aside class="years">',
-                  '<div class="rail" aria-hidden="true"></div>',
-                  '<ul id="expYears" class="year-list" aria-label="Years"></ul>',
-                  '<div id="yearIndicator" class="indicator" aria-hidden="true"></div>',
-                '</aside>',
-                '<div id="expDetails" class="details" aria-live="polite"></div>',
+                '<div class="years">',
+                  '<div class="rail"></div>',
+                  '<ul id="expYears" class="year-list"></ul>',
+                '</div>',
+                '<div id="expDetails" class="details"></div>',
               '</div>',
             '</section>'
           ].join('');
         },
+
         skills(){
           document.title = 'Skills & Achievements : Karrthik Madhavan';
           return [
@@ -230,7 +355,7 @@
               '<h2>Core Skills</h2>',
               '<div class="grid grid-2">',
                 '<div>',
-                  '<h3>Analytics & Business Intelligence</h3>',
+                  '<h3>Analytics &amp; Business Intelligence</h3>',
                   '<ul class="list">',
                     '<li>Power BI : data modelling, DAX, M, RLS and Dataflows Gen2.</li>',
                     '<li>Microsoft Fabric : Lakehouse, Warehouse and Pipelines for governed analytics.</li>',
@@ -248,7 +373,7 @@
                   '</ul>',
                 '</div>',
                 '<div>',
-                  '<h3>Delivery & Governance</h3>',
+                  '<h3>Delivery &amp; Governance</h3>',
                   '<ul class="list">',
                     '<li>Agile delivery (Scrum / Kanban), sprint planning and backlog refinement.</li>',
                     '<li>Power BI governance, development standards and testing frameworks.</li>',
@@ -256,7 +381,7 @@
                   '</ul>',
                 '</div>',
                 '<div>',
-                  '<h3>Collaboration & Leadership</h3>',
+                  '<h3>Collaboration &amp; Leadership</h3>',
                   '<ul class="list">',
                     '<li>Stakeholder management with Finance, CCE, CME, Sustainability and HR.</li>',
                     '<li>Mentoring analysts and running knowledge-sharing sessions.</li>',
@@ -272,13 +397,14 @@
                 '<li><strong>1,300% increase</strong> in active analytics users (17 → 241) at Iarnród Éireann.</li>',
                 '<li><strong>6,052 dashboard views</strong> by Period 11, 2025 across CCE, CME and Finance KPI hubs.</li>',
                 '<li><strong>10+ leadership-adopted dashboards</strong> driving strategic and operational decisions.</li>',
-                '<li><strong>DAI Power BI governance and testing framework</strong> co-authored and adopted org-wide.</li>',
+                '<li><strong>DAI Power BI governance and testing framework</strong> co-authored and adopted organisation-wide.</li>',
                 '<li><strong>200+ ETL jobs automated</strong> at Amazon, contributing to <strong>+23% team productivity</strong>.</li>',
                 '<li>Helped deliver <strong>+2.5% ML accuracy</strong> and <strong>+6.3% coverage</strong> improvements through better labelling and QA.</li>',
               '</ul>',
             '</section>'
           ].join('');
         },
+
         certifications(){
           document.title = 'Certifications & Education : Karrthik Madhavan';
           return [
@@ -287,15 +413,22 @@
               '<div class="grid grid-2">',
                 '<div>',
                   '<ul class="list">',
-                    '<li><strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong></li>',
-                    '<li><strong>Lean and Six Sigma Principles</strong> : University of Limerick</li>',
-                    '<li><strong>Certified Scrum Master (CSM)</strong></li>',
-                    '<li><strong>Fabric Analytics Engineer (DP-600)</strong> : In progress</li>',
-                    '<li><strong>SAP Analytics Cloud</strong> : In progress</li>',
+                    '<li><strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong><br><span class="muted">Validated expertise in data modelling, DAX, cleansing, governance, and building production-grade Power BI solutions.</span></li>',
+                    '<li><strong>Lean and Six Sigma Principles : University of Limerick</strong><br><span class="muted">Grounding in process improvement, SIPOC, root-cause analysis and waste reduction for better analytical workflows.</span></li>',
+                    '<li><strong>Certified Scrum Master (CSM)</strong><br><span class="muted">Agile delivery, sprint ceremonies, backlog management and cross-team collaboration for analytics projects.</span></li>',
+                    '<li><strong>Fabric Analytics Engineer (DP-600) : In progress</strong><br><span class="muted">Enterprise-scale Fabric architecture: Lakehouse, Warehouse, pipelines, semantic models and governed analytics.</span></li>',
+                    '<li><strong>SAP Analytics Cloud : In progress</strong><br><span class="muted">SAP-driven planning, KPI modelling and visualisation to complement SAP PM/MM/FICO work.</span></li>',
                   '</ul>',
                 '</div>',
                 '<div>',
-                  '<p class="muted">Certifications focused on analytics delivery, BI excellence, process improvement and agile ways of working. Together they support strong governance and reliable, production-ready dashboards.</p>',
+                  '<h3 style="margin-top:0">How these certifications support my work</h3>',
+                  '<ul class="list">',
+                    '<li><strong>PL-300</strong> strengthens enterprise data modelling, DAX optimisation and scalable dashboard design.</li>',
+                    '<li><strong>Lean &amp; Six Sigma</strong> reinforces structured problem-solving, measurement, validation and continuous improvement.</li>',
+                    '<li><strong>CSM</strong> ensures projects are delivered predictably, with clear communication and measurable outcomes.</li>',
+                    '<li><strong>DP-600</strong> (in progress) aligns with the move to Microsoft Fabric and unified analytics architecture.</li>',
+                    '<li><strong>SAP Analytics Cloud</strong> supports deeper integration between SAP data and modern BI workflows.</li>',
+                  '</ul>',
                 '</div>',
               '</div>',
             '</section>',
@@ -304,7 +437,7 @@
               '<h2>Education</h2>',
               '<div class="grid grid-2">',
                 '<div>',
-                  '<h3>MSc : Business Information & Analytics Systems</h3>',
+                  '<h3>MSc : Business Information &amp; Analytics Systems</h3>',
                   '<p class="muted">University College Cork (2021–2022) : First Class Honours</p>',
                   '<ul class="list">',
                     '<li>Advanced analytics, data warehousing and business intelligence.</li>',
@@ -313,10 +446,10 @@
                   '</ul>',
                 '</div>',
                 '<div>',
-                  '<h3>B.E. : Electronics & Communication Engineering</h3>',
+                  '<h3>B.E. : Electronics &amp; Communication Engineering</h3>',
                   '<p class="muted">Anna University (2013–2017) : First Class</p>',
                   '<ul class="list">',
-                    '<li>Strong foundations in problem solving, maths and systems thinking.</li>',
+                    '<li>Strong foundations in problem solving, mathematics and systems thinking.</li>',
                     '<li>Exposure to embedded systems, signal processing and communication networks.</li>',
                   '</ul>',
                 '</div>',
@@ -324,10 +457,16 @@
             '</section>'
           ].join('');
         },
+
         hobbies(sub){
           const tabs = ['tennis','badminton','boxing','photography','dinghy-sailing'];
-          const names = {tennis:'Tennis',badminton:'Badminton',boxing:'Boxing',photography:'Photography','dinghy-sailing':'Dinghy Sailing'};
-
+          const names = {
+            tennis:'Tennis',
+            badminton:'Badminton',
+            boxing:'Boxing',
+            photography:'Photography',
+            'dinghy-sailing':'Dinghy Sailing'
+          };
           const blocks = {
             tennis:`
               <p>Active league and social player; council member at <strong>Balrothery Tennis Club</strong> in Balbriggan.</p>
@@ -374,7 +513,7 @@
             '<section class="card">',
               '<h2>Hobbies</h2>',
               '<div class="tabs">',
-                tabs.map(t=>'<a class="tab '+(t===active?'active':'')+'" href="#/hobbies/'+t+'">'+names[t]+'</a>').join(''),
+                tabs.map(t => '<a class="tab '+(t===active?'active':'')+'" href="#/hobbies/'+t+'">'+names[t]+'</a>').join(''),
               '</div>',
               '<div class="card" style="margin-top:10px">',
                 '<h3 style="margin:0 0 6px">'+names[active]+'</h3>',
@@ -383,57 +522,24 @@
             '</section>'
           ].join('');
         },
+
         notFound(){
           document.title = 'Not Found : Karrthik Madhavan';
           return '<section class="card"><h2>Page not found</h2><p class="muted">The page you requested does not exist.</p></section>';
         }
       };
 
-      /* ---------------- ROUTER ---------------- */
-      function setActive(link){
-        document.querySelectorAll('.pill').forEach(a=>a.classList.remove('active'));
-        if(link) link.classList.add('active');
-      }
-
-      function render(){
-        const hash = (location.hash || '').replace('#','');
-        const parts = hash.split('/').filter(Boolean);
-        let html = '';
-        let active = null;
-        if(parts.length === 0){
-          html = pages.home();
-          active = document.querySelector('a[href="#/"]');
-        } else if(parts[0]==='experience'){
-          html = pages.experience();
-          active = document.querySelector('a[href="#/experience"]');
-        } else if(parts[0]==='skills'){
-          html = pages.skills();
-          active = document.querySelector('a[href="#/skills"]');
-        } else if(parts[0]==='certifications'){
-          html = pages.certifications();
-          active = document.querySelector('a[href="#/certifications"]');
-        } else if(parts[0]==='hobbies'){
-          html = pages.hobbies(parts[1]);
-          active = document.querySelector('a[href="#/hobbies"]');
-        } else {
-          html = pages.notFound();
-        }
-        app.innerHTML = html;
-        setActive(active);
-        if(parts[0]==='experience') initExperience();
-        window.scrollTo({top:0, behavior:'smooth'});
-      }
-
-      window.addEventListener('hashchange', render);
-      if(!location.hash){ location.hash = '#/'; }
-
-      /* -------------- EXPERIENCE DATA + INIT -------------- */
+      /* ---------- EXPERIENCE DATA ---------- */
       const experienceData = {
         2017: [{
-          title:'Quality Analyst', company:'Amazon', org:'amazon', location:'Chennai', period:'Mar 2017 : Dec 2017',
+          title:'Quality Analyst',
+          company:'Amazon',
+          org:'amazon',
+          location:'Chennai',
+          period:'Mar 2017 : Dec 2017',
           impact:[
-            'Improved catalogue quality through structured validation and documented QA playbooks',
-            'Supported launch and scaling of new Amazon retail programmes with reliable data quality'
+            'Improved catalogue quality through structured validation and documented QA playbooks.',
+            'Supported launch and scaling of new Amazon retail programmes with reliable data quality.'
           ],
           responsibilities:[
             'Performed analytics and validation across retail catalogues; authored QA playbooks and SOPs.',
@@ -444,7 +550,11 @@
           stack:['Excel','Internal Amazon QA tools','Basic SQL']
         }],
         2018: [{
-          title:'Quality Analyst', company:'Amazon', org:'amazon', location:'Chennai', period:'Jan 2018 : Dec 2018',
+          title:'Quality Analyst',
+          company:'Amazon',
+          org:'amazon',
+          location:'Chennai',
+          period:'Jan 2018 : Dec 2018',
           impact:[
             'Standardised QA playbooks across teams and reduced re-work through better instrumentation.'
           ],
@@ -456,7 +566,11 @@
           stack:['Excel','SQL','Internal tools','Process mapping']
         }],
         2019: [{
-          title:'Quality Lead (Acting)', company:'Amazon', org:'amazon', location:'Chennai', period:'Jan 2019 : Dec 2019',
+          title:'Quality Lead (Acting)',
+          company:'Amazon',
+          org:'amazon',
+          location:'Chennai',
+          period:'Jan 2019 : Dec 2019',
           impact:[
             '+23% team productivity vs baseline.',
             'Improved ML model accuracy by +2.5% and coverage by +6.3%.',
@@ -471,7 +585,11 @@
           stack:['Excel','SQL','Amazon Web Services','Stakeholder management']
         }],
         2020: [{
-          title:'Senior Data Analyst : Quality Expert', company:'Amazon', org:'amazon', location:'Chennai', period:'Jul 2020 : Dec 2020',
+          title:'Senior Data Analyst : Quality Expert',
+          company:'Amazon',
+          org:'amazon',
+          location:'Chennai',
+          period:'Jul 2020 : Dec 2020',
           impact:[
             'Delivered production BI and forecasting dashboards for quality and risk.',
             'Automated 200+ ETL jobs to reduce manual reporting.',
@@ -487,7 +605,11 @@
         }],
         2021: [
           {
-            title:'Senior Data Analyst : Quality Expert', company:'Amazon', org:'amazon', location:'Chennai', period:'Jan 2021 : Aug 2021',
+            title:'Senior Data Analyst : Quality Expert',
+            company:'Amazon',
+            org:'amazon',
+            location:'Chennai',
+            period:'Jan 2021 : Aug 2021',
             impact:[
               'Maintained stable quality KPIs during a transition period.',
               'Supported on-time delivery for cross-team programmes.'
@@ -500,7 +622,11 @@
             stack:['Python','SQL','Tableau','Process mapping','Stakeholder communication']
           },
           {
-            title:'Postgraduate Teaching Assistant', company:'University College Cork', org:'ucc', location:'Cork', period:'Oct 2021 : Dec 2021',
+            title:'Postgraduate Teaching Assistant',
+            company:'University College Cork',
+            org:'ucc',
+            location:'Cork',
+            period:'Oct 2021 : Dec 2021',
             impact:[
               'Supported MSc cohorts in Business Analytics and Web Application Development.',
               'Improved student project quality through structured feedback and labs.'
@@ -514,7 +640,11 @@
           }
         ],
         2022: [{
-          title:'Postgraduate Teaching Assistant', company:'University College Cork', org:'ucc', location:'Cork', period:'Jan 2022 : Aug 2022',
+          title:'Postgraduate Teaching Assistant',
+          company:'University College Cork',
+          org:'ucc',
+          location:'Cork',
+          period:'Jan 2022 : Aug 2022',
           impact:[
             'Mentored MSc students across analytics workflows.',
             'Helped raise overall analytical and storytelling capability in the cohort.'
@@ -527,7 +657,11 @@
           stack:['Python','SQL','Excel','Data storytelling','Dashboarding']
         }],
         2023: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Feb 2023 : Dec 2023',
+          title:'Data Analyst : Data Analytics and Intelligence',
+          company:'Iarnród Éireann (Irish Rail)',
+          org:'irishrail',
+          location:'Dublin',
+          period:'Feb 2023 : Dec 2023',
           impact:[
             'Delivered the early CCE analytics foundation including SharePoint A3 reporting.',
             'Built the organisation’s first Occupancy mock-up using S3, SRPSS (LEAP) and RPI train timetable data.',
@@ -546,7 +680,11 @@
           stack:['Power BI','SAP PM','AIMS','TOPS','S3','SRPSS','RPI','SharePoint','Azure','Microsoft Fabric']
         }],
         2024: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2024 : Dec 2024',
+          title:'Data Analyst : Data Analytics and Intelligence',
+          company:'Iarnród Éireann (Irish Rail)',
+          org:'irishrail',
+          location:'Dublin',
+          period:'Jan 2024 : Dec 2024',
           impact:[
             'Expanded reporting delivery from CCE into CME based on 2023 learnings.',
             'Prepared and refined five high-impact SAP PM and SAP FICO mock-ups (three in service, two ready for development).',
@@ -564,7 +702,11 @@
           stack:['Power BI','SAP MM','SAP PM','SAP FICO','Microsoft Fabric','SQL','AIMS','FieldReach','SharePoint','TOPS']
         }],
         2025: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2025 : Present',
+          title:'Data Analyst : Data Analytics and Intelligence',
+          company:'Iarnród Éireann (Irish Rail)',
+          org:'irishrail',
+          location:'Dublin',
+          period:'Jan 2025 : Present',
           impact:[
             'Delivered the new CCE IM Review report, regularly presented at senior leadership meetings.',
             'Built a 50+ page CSRD Sustainability report used across the business and CIE.',
@@ -582,102 +724,130 @@
           stack:['Power BI','SAP FICO','Microsoft Fabric','SQL','Sustainability data sources','AIMS','CCE/CME operational systems']
         }]
       };
-tle:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2024 : Dec 2024',
-          impact:[
-            'Expanded reporting delivery from CCE into CME based on 2023 learnings.',
-            'Prepared and refined five high-impact SAP PM and SAP FICO mock-ups (three in service, two ready for development).',
-            'Supported 370% growth in dashboard views across CCE and CME.'
-          ],
-          responsibilities:[
-            'Carried CCE reporting learnings into CME, applying structured design and governance practices.',
-            'Worked closely with CME business analysts to design and deliver multiple operational dashboards.',
-            'Collaborated with contract members to bring Phase 2 Finance Payroll reporting into service.',
-            'Learnt CME maintenance processes, fleet performance metrics and component-to-equipment mapping.',
-            'Learnt SAP MM and SAP FICO datasets to support upcoming financial and operational reporting.',
-            'Prepared mock-ups for five high-impact CME/CCE reports: three delivered into service, two finalised and awaiting build.',
-            'Maintained robust validation, design and governance practices across all new analytics work.'
-          ],
-          stack:['Power BI','SAP MM','SAP PM','SAP FICO','Microsoft Fabric','SQL','AIMS','FieldReach','SharePoint','TOPS']
-        }],
-        2025: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2025 : Present',
-          impact:[
-            'Delivered the new CCE IM Review report, regularly presented at senior leadership meetings.',
-            'Built a 50+ page CSRD Sustainability report used across the business and CIE.',
-            'Established SAP FICO modelling foundations for CCE Finance (delivery planned early 2026).'
-          ],
-          responsibilities:[
-            'Expanded CME maintenance learnings into CCE maintenance reporting; delivered new maintenance dashboards.',
-            'Designed and delivered the new CCE IM Review report, now used at senior leadership forums.',
-            'Built a detailed CSRD Sustainability report, integrating multiple data sources across the organisation and presenting it to business owners and CIE.',
-            'Prepared mock-ups for a future CSRD dashboard, now queued for development.',
-            'Developed an Overtime RU KPI report scheduled for deployment by end of year.',
-            'Deepened SAP FICO dataset understanding and prepared finance data models for early 2026 delivery.',
-            'Acted as Safety Representative (Loop line : Connolly) and Tennis Council Member at Balrothery, supporting safety and community initiatives.'
-          ],
-          stack:['Power BI','SAP FICO','Microsoft Fabric','SQL','Sustainability data sources','AIMS','CCE/CME operational systems']
-        }]
-      };
-tle:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2024 : Dec 2024',
-          impact:[
-            'Expanded reporting delivery from CCE into CME based on 2023 learnings.',
-            'Prepared and refined five high-impact SAP PM and SAP FICO mock-ups (three in service, two ready for development).',
-            'Supported 370% growth in dashboard views across CCE and CME.'
-          ],
-          responsibilities:[
-            'Carried CCE reporting learnings into CME, applying structured design and governance practices.',
-            'Worked closely with CME business analysts to design and deliver multiple operational dashboards.',
-            'Collaborated with contract members to bring Phase 2 Finance Payroll reporting into service.',
-            'Learnt CME maintenance processes, fleet performance metrics and component-to-equipment mapping.',
-            'Learnt SAP MM and SAP FICO datasets to support upcoming financial and operational reporting.',
-            'Prepared mock-ups for five high-impact CME/CCE reports: three delivered into service, two finalised and awaiting build.',
-            'Maintained robust validation, design and governance practices across all new analytics work.'
-          ],
-          stack:['Power BI','SAP MM','SAP PM','SAP FICO','Microsoft Fabric','SQL','AIMS','FieldReach','SharePoint','TOPS']
-        }],
-        2025: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2025 : Present',
-          impact:[
-            'Delivered the new CCE IM Review report, regularly presented at senior leadership meetings.',
-            'Built a 50+ page CSRD Sustainability report used across the business and CIE.',
-            'Established SAP FICO modelling foundations for CCE Finance (delivery planned early 2026).'
-          ],
-          responsibilities:[
-            'Expanded CME maintenance learnings into CCE maintenance reporting; delivered new maintenance dashboards.',
-            'Designed and delivered the new CCE IM Review report, now used at senior leadership forums.',
-            'Built a detailed CSRD Sustainability report, integrating multiple data sources across the organisation and presenting it to business owners and CIE.',
-            'Prepared mock-ups for a future CSRD dashboard, now queued for development.',
-            'Developed an Overtime RU KPI report scheduled for deployment by end of year.',
-            'Deepened SAP FICO dataset understanding and prepared finance data models for early 2026 delivery.',
-            'Acted as Safety Representative (Loop line : Connolly) and Tennis Council Member at Balrothery, supporting safety and community initiatives.'
-          ],
-          stack:['Power BI','SAP FICO','Microsoft Fabric','SQL','Sustainability data sources','AIMS','CCE/CME operational systems']
-        }]
-      };
-tle:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2024 : Dec 2024',
-          impact:[
-            'Expanded reporting delivery from CCE into CME based on 2023 learnings.',
-            'Prepared and refined five high-impact SAP PM and SAP FICO mock-ups (three in service, two ready for development).',
-            'Supported 370% growth in dashboard views across CCE and CME.'
-          ],
-          responsibilities:[
-            'Carried CCE reporting learnings into CME, applying structured design and governance practices.',
-            'Worked closely with CME business analysts to design and deliver multiple operational dashboards.',
-            'Collaborated with contract members to bring Phase 2 Finance Payroll reporting into service.',
-            'Learnt CME maintenance processes, fleet performance metrics and component-to-equipment mapping.',
-            'Learnt SAP MM and SAP FICO datasets to support upcoming financial and operational reporting.',
-            'Prepared mock-ups for five high-impact CME/CCE reports: three delivered into service, two finalised and awaiting build.',
-            'Maintained robust validation, design and governance practices across all new analytics work.'
-          ],
-          stack:['Power BI','SAP MM','SAP PM','SAP FICO','Microsoft Fabric','SQL','AIMS','FieldReach','SharePoint','TOPS']
-        }],
-        2025: [{
-          title:'Data Analyst : Data Analytics and Intelligence', company:'Iarnród Éireann (Irish Rail)', org:'irishrail', location:'Dublin', period:'Jan 2025 : Present',
-          impact:[
-            'Delivered the new CCE IM Review report, regularly presented at senior leadership meetings.',
-            'Built a 50+ page CSRD Sustainability report used across the business and CIE.',
-            'Established SAP FICO modelling foundations for CCE Finance (delivery planned early 2026).'
-          ],
-          responsibilities:[
-            'Expanded CME maintenance learnings into CCE maintenance reporting; delivered new maintenance dashboards.',
-            'Designed and delivered the new CCE
+
+      /* ---------- EXPERIENCE INIT ---------- */
+      function initExperience(){
+        const yearsEl = document.getElementById('expYears');
+        const detailsEl = document.getElementById('expDetails');
+        if(!yearsEl || !detailsEl) return;
+
+        const years = Object.keys(experienceData).map(Number).sort((a,b)=>b-a);
+        const orgIcons = {
+          amazon:'🛒',
+          ucc:'🎓',
+          irishrail:'🚆'
+        };
+
+        yearsEl.innerHTML = years.map((y,i)=>{
+          const first = (experienceData[y] && experienceData[y][0]) || {};
+          const icon = orgIcons[first.org] || '📊';
+          return (
+            '<li data-year="'+y+'">'+
+              '<button class="year-btn" data-year="'+y+'" aria-pressed="'+(i===0)+'">'+
+                '<span class="year-icon">'+icon+'</span>'+
+                '<span>'+y+'</span>'+
+              '</button>'+
+            '</li>'
+          );
+        }).join('');
+
+        function renderYear(y){
+          const entries = experienceData[y] || [];
+          detailsEl.innerHTML =
+            '<span class="detail-year">'+y+'</span>' +
+            entries.map(e=>{
+              const impactHtml = (e.impact && e.impact.length)
+                ? '<div class="impact-block">'+
+                    '<span class="impact-label">Impact</span>'+
+                    '<div class="impact-chips">'+
+                      e.impact.map(ch => '<span class="impact-chip">'+ch+'</span>').join('')+
+                    '</div>'+
+                  '</div>'
+                : '';
+              const respHtml = (e.responsibilities && e.responsibilities.length)
+                ? '<div class="section-block">'+
+                    '<span class="section-label">Key Responsibilities</span>'+
+                    '<ul class="list">'+
+                      e.responsibilities.map(r => '<li>'+r+'</li>').join('')+
+                    '</ul>'+
+                  '</div>'
+                : '';
+              const stackHtml = (e.stack && e.stack.length)
+                ? '<div class="stack-line"><span class="stack-label">Tech stack:</span> '+e.stack.join(' • ')+'</div>'
+                : '';
+              return (
+                '<div class="entry">'+
+                  '<h4>'+e.title+'</h4>'+
+                  '<div class="meta">'+e.company+' • '+e.location+' • '+e.period+'</div>'+
+                  impactHtml+respHtml+stackHtml+
+                '</div>'
+              );
+            }).join('');
+        }
+
+        // initial
+        renderYear(years[0]);
+
+        yearsEl.addEventListener('click', e=>{
+          const btn = e.target.closest('.year-btn');
+          if(!btn) return;
+          yearsEl.querySelectorAll('.year-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
+          btn.setAttribute('aria-pressed','true');
+          renderYear(+btn.dataset.year);
+        });
+      }
+
+      /* ---------- ROUTER ---------- */
+      function setActive(link){
+        document.querySelectorAll('.pill').forEach(a=>a.classList.remove('active'));
+        if(link) link.classList.add('active');
+      }
+
+      function render(){
+        const hash = (location.hash || '').replace('#','');
+        const parts = hash.split('/').filter(Boolean);
+        let html = '';
+        let active = null;
+
+        if(parts.length === 0){
+          html = pages.home();
+          active = document.querySelector('a[href="#/"]');
+        } else if(parts[0]==='experience'){
+          html = pages.experience();
+          active = document.querySelector('a[href="#/experience"]');
+        } else if(parts[0]==='skills'){
+          html = pages.skills();
+          active = document.querySelector('a[href="#/skills"]');
+        } else if(parts[0]==='certifications'){
+          html = pages.certifications();
+          active = document.querySelector('a[href="#/certifications"]');
+        } else if(parts[0]==='hobbies'){
+          html = pages.hobbies(parts[1]);
+          active = document.querySelector('a[href="#/hobbies"]');
+        } else {
+          html = pages.notFound();
+        }
+
+        app.innerHTML = html;
+        setActive(active);
+        if(parts[0]==='experience') initExperience();
+        window.scrollTo({top:0, behavior:'instant'});
+      }
+
+      window.addEventListener('hashchange', render);
+      if(!location.hash) location.hash = '#/';
+      render();
+
+    } catch(err){
+      const app = document.getElementById('app');
+      if(app){
+        app.innerHTML =
+          '<section class="card"><h2>Something went wrong</h2>'+
+          '<p class="muted">'+(err.message || err)+'</p></section>';
+      }
+      console.error(err);
+    }
+  })();
+  </script>
+</body>
+</html>
